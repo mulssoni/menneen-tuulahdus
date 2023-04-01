@@ -47,7 +47,7 @@
   }
 
   &__title {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 500;
     margin: 0;
     margin-bottom: 2rem;

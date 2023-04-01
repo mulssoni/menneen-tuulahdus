@@ -57,6 +57,7 @@
   &__text {
     font-size: 1.25rem;
     margin-bottom: 1rem;
+    font-weight: 300;
   }
 
   &__image {

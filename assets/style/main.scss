@@ -33,6 +33,7 @@ body {
   font-weight: 700;
   font-family: var(--font-family);
   outline: none;
+  border: none;
   transition: background-color 0.25s ease-out;
   text-transform: uppercase;
   cursor: pointer;
@@ -41,12 +42,10 @@ body {
     @extend .button;
     background-color: var(--color-primary);
     color: var(--color-text);
-    border: 1px solid var(--color-primary-600);
 
     &:hover {
       background-color: var(--color-primary-600);
       color: var(--color-text);
-      border: 1px solid var(--color-primary-700);
     }
   }
 

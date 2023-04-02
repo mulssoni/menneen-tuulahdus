@@ -1,15 +1,26 @@
 <template>
   <nav :class="`nav ${isOpen ? 'open' : ''}`">
+    <button
+      @click="toggleNav"
+      class="button__toggle-nav button--link"
+      role="button"
+      aria-label="Toggle navigation"
+    >
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </button>
     <div class="nav__container">
-      <button @click="toggleNav" class="button__toggle-nav button--link">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </button>
-      <ul class="nav__list">
-        <li class="nav__item"><NuxtLink to="/">Home</NuxtLink></li>
-        <li class="nav__item"><NuxtLink to="/about">About</NuxtLink></li>
-        <li class="nav__item"><a href="#">Contact</a></li>
+      <ul class="nav__list" role="navigation">
+        <li class="nav__item" @click="closeNav">
+          <NuxtLink to="/">Home</NuxtLink>
+        </li>
+        <li class="nav__item" @click="closeNav">
+          <NuxtLink to="/about">About</NuxtLink>
+        </li>
+        <li class="nav__item" @click="closeNav">
+          <NuxtLink to="/contact">Contact</NuxtLink>
+        </li>
       </ul>
     </div>
   </nav>
@@ -18,6 +29,9 @@
 const isOpen = ref(false)
 const toggleNav = () => {
   isOpen.value = !isOpen.value
+}
+const closeNav = () => {
+  isOpen.value = false
 }
 </script>
 
@@ -33,6 +47,8 @@ const toggleNav = () => {
   display: flex;
   flex-direction: column;
   transition: all 0.25s ease-out;
+  position: relative;
+  z-index: 20;
   .line {
     --size: 2px;
     transition: all 0.25s ease-out;
@@ -65,6 +81,23 @@ const toggleNav = () => {
       text-transform: uppercase;
       transition: all 0.25s ease-out;
 
+      &.router-link-exact-active {
+        color: var(--color-primary);
+        /* position: relative; */
+
+        /* &::after {
+          --size: 6px;
+          width: var(--size);
+          height: var(--size);
+          position: absolute;
+          left: 50%;
+          bottom: -5px;
+          border-radius: 50%;
+          background-color: var(--color-primary);
+          content: '';
+        } */
+      }
+
       &:hover {
         color: var(--color-primary);
       }
@@ -87,6 +120,26 @@ const toggleNav = () => {
             translateY(calc(var(--size) - (var(--size) * 2 + 1px)));
           transform-origin: center;
         }
+      }
+    }
+    .nav {
+      &__container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(5px);
+      }
+      &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        font-size: 2rem;
       }
     }
   }

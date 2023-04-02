@@ -1,5 +1,5 @@
 <template>
-  <header class="header container">
+  <header class="header">
     <div class="header__address">
       <span>Teollisuuskatu 7, Jämsä</span>
       <span class="line"></span>
@@ -19,13 +19,17 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
+  height: var(--header-height);
 
   &__address {
-    display: flex;
-    align-items: center;
-    column-gap: 1rem;
-    font-family: var(--font-family-accent);
-    font-size: 0.85rem;
+    display: none;
+    @include breakpoint-up(md) {
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+      font-family: var(--font-family-accent);
+      font-size: 0.85rem;
+    }
   }
 
   &__logo {

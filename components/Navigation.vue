@@ -27,9 +27,10 @@
       text-decoration: none;
       font-weight: 700;
       text-transform: uppercase;
+      transition: all 0.25s ease-out;
 
       &:hover {
-        color: var(--color-secondary);
+        color: var(--color-primary);
       }
     }
   }

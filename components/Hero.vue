@@ -1,14 +1,12 @@
 <template>
   <div class="hero">
-    <div class="hero__container container">
+    <div class="hero__container">
       <div class="hero__content">
         <h1 class="hero__title">Menneen tuulahdus</h1>
         <p class="hero__text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           voluptates, quod, quia, voluptate quae voluptatem quibusdam
-          exercitationem quidem voluptatum quas quos. Quisquam, quae. Quisquam
-          voluptates, quod, quia, voluptate quae voluptatem quibusdam
-          exercitationem quidem voluptatum quas quos. Quisquam, quae.
+          exercitationem quidem voluptatum quas quos.
         </p>
         <div class="hero__buttons">
           <button class="button--primary">Hae pöytää</button>
@@ -25,11 +23,11 @@
 </template>
 <style lang="scss" scoped>
 .hero {
-  --content-padding: 5rem 0;
+  --content-padding: 4rem 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: calc(100vh - var(--header-height));
 
   &__container {
     display: flex;

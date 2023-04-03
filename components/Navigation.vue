@@ -12,14 +12,13 @@
     </button>
     <div class="nav__container">
       <ul class="nav__list" role="navigation">
-        <li class="nav__item" @click="closeNav">
-          <NuxtLink to="/">Home</NuxtLink>
-        </li>
-        <li class="nav__item" @click="closeNav">
-          <NuxtLink to="/about">About</NuxtLink>
-        </li>
-        <li class="nav__item" @click="closeNav">
-          <NuxtLink to="/contact">Contact</NuxtLink>
+        <li
+          v-for="item in navItems"
+          class="nav__item"
+          @click="closeNav"
+          :key="item.name"
+        >
+          <NuxtLink :to="item.path">{{ item.name }}</NuxtLink>
         </li>
       </ul>
     </div>
@@ -33,6 +32,32 @@ const toggleNav = () => {
 const closeNav = () => {
   isOpen.value = false
 }
+const navItems = [
+  {
+    name: 'Etusivu',
+    path: '/',
+  },
+  {
+    name: 'Hinnasto',
+    path: '/hinnasto',
+  },
+  {
+    name: 'Varaus',
+    path: '/varaus',
+  },
+  {
+    name: 'Ohjeet',
+    path: '/ohjeet',
+  },
+  {
+    name: 'Ostetaan',
+    path: '/ostetaan',
+  },
+  {
+    name: 'Yhteystiedot',
+    path: '/yhteystiedot',
+  },
+]
 </script>
 
 <style lang="scss" scoped>

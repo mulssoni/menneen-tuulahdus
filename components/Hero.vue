@@ -88,6 +88,7 @@
     @include breakpoint-down(md) {
       border-top-left-radius: 16px;
       border-top-right-radius: 16px;
+      overflow: hidden;
       position: absolute;
       top: 0;
       left: 0;

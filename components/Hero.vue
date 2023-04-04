@@ -2,7 +2,7 @@
   <div class="hero">
     <div class="hero__container">
       <div class="hero__content">
-        <h1 class="hero__title">Menneen tuulahdus</h1>
+        <h1 class="hero__title">Menneen Tuulahdus</h1>
         <p class="hero__text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           voluptates, quod, quia, voluptate quae voluptatem quibusdam
@@ -28,20 +28,41 @@
   background-position: center;
   background-repeat: no-repeat;
   height: calc(100vh - var(--header-height));
+  @include breakpoint-down(md) {
+    --content-padding: 0;
+    margin-left: calc(var(--container-padding) * -1);
+    margin-right: calc(var(--container-padding) * -1);
+  }
 
   &__container {
     display: flex;
-    justify-content: space-between;
     height: 100%;
     column-gap: 10%;
     padding: var(--content-padding);
+    @include breakpoint-down(md) {
+      position: relative;
+      justify-content: space-between;
+    }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
     width: 40%;
-    margin-top: 5%;
+    padding-top: 5%;
+
+    @include breakpoint-down(md) {
+      width: 100%;
+      z-index: 1;
+      padding: 10% var(--container-padding);
+      text-align: center;
+      justify-content: space-between;
+      color: #fff;
+
+      h1 {
+        font-size: min(15vmin, 5.5rem);
+      }
+    }
   }
 
   &__title {
@@ -49,6 +70,10 @@
     font-weight: 500;
     margin: 0;
     margin-bottom: 2rem;
+
+    @include breakpoint-down(md) {
+      flex: 1;
+    }
   }
 
   &__text {
@@ -58,11 +83,30 @@
   }
 
   &__image {
-    flex: 1;
     height: 100%;
+    flex: 1;
+    @include breakpoint-down(md) {
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: '';
+        background-color: rgba(0, 0, 0, 0.15);
+      }
+    }
 
     img {
       width: 100%;
+      height: auto;
       min-height: 100%;
       object-fit: cover;
       display: block;

@@ -159,6 +159,7 @@ const navItems = [
         align-items: center;
         background-color: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(5px);
+        z-index: 10;
       }
       &__list {
         display: flex;

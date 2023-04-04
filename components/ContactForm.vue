@@ -1,5 +1,5 @@
 <template>
-  <form @submit="submitForm">
+  <form @submit.prevent="submitForm">
     <div class="booking-form">
       <div class="input-container">
         <label for="name">Nimi</label>
@@ -58,7 +58,7 @@
           required
         />
       </div>
-      <button @click="submitForm" class="button--primary" type="submit">
+      <button @click.prevent="submitForm" class="button--primary" type="submit">
         Lähetä
       </button>
     </div>

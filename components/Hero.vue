@@ -67,10 +67,12 @@
 
   &__title {
     font-size: 3.5rem;
-    font-weight: 500;
     margin: 0;
+    font-weight: 700;
     margin-bottom: 2rem;
 
+    @include breakpoint-up(md) {
+    }
     @include breakpoint-down(md) {
       flex: 1;
     }

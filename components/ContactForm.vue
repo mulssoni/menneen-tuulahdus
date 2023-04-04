@@ -38,25 +38,27 @@
         />
         <label for="fifty-fifty">50-50 palvelu</label>
       </div>
-      <div v-if="!data.fiftyFifty" class="input-container">
-        <label for="start-date">Alkamispäivä</label>
-        <input
-          v-model="data.startDate"
-          type="date"
-          id="start-date"
-          name="start-date"
-          required
-        />
-      </div>
-      <div v-if="!data.fiftyFifty" class="input-container">
-        <label for="end-date">Loppumispäivä</label>
-        <input
-          v-model="data.endDate"
-          type="date"
-          id="end-date"
-          name="end-date"
-          required
-        />
+      <div class="dates">
+        <div v-if="!data.fiftyFifty" class="input-container">
+          <label for="start-date">Alkamispäivä</label>
+          <input
+            v-model="data.startDate"
+            type="date"
+            id="start-date"
+            name="start-date"
+            required
+          />
+        </div>
+        <div v-if="!data.fiftyFifty" class="input-container">
+          <label for="end-date">Loppumispäivä</label>
+          <input
+            v-model="data.endDate"
+            type="date"
+            id="end-date"
+            name="end-date"
+            required
+          />
+        </div>
       </div>
       <button @click.prevent="submitForm" class="button--primary" type="submit">
         Lähetä
@@ -85,8 +87,13 @@ const submitForm = () => {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 350px;
   row-gap: 1.5rem;
+
+  .dates {
+    display: flex;
+    gap: 1rem;
+  }
+
   .input-container {
     display: flex;
     flex-direction: column;

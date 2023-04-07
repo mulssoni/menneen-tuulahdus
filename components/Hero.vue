@@ -41,8 +41,10 @@
     background-size: cover;
     border-radius: 18px;
     overflow: hidden;
+    /* border: 1px solid #000; */
     @include breakpoint-down(md) {
       position: relative;
+      box-shadow: inset 0 0 0 1px #000;
       justify-content: space-between;
     }
   }
@@ -51,7 +53,7 @@
     display: flex;
     flex-direction: column;
     width: 50%;
-    padding: 4rem 5rem 3rem 3rem;
+    padding: 10% 5rem 3rem 3rem;
 
     @include breakpoint-down(md) {
       width: 100%;
@@ -69,10 +71,11 @@
   }
 
   &__title {
-    font-size: 3.5rem;
+    font-size: clamp(3.5rem, 5vw, 4rem);
+    letter-spacing: 2px;
     margin: 0;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 
     @include breakpoint-up(md) {
     }
@@ -86,19 +89,21 @@
     margin-bottom: 1rem;
     font-weight: 300;
     font-family: 'Montserrat', sans-serif;
-    backdrop-filter: blur(3px);
     padding: 2rem 1.5rem;
-    border-radius: 14px;
-    background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 4px 3px rgba(205, 180, 219, 0.3);
+    border-radius: 18px;
     overflow: hidden;
+    @include breakpoint-up(md) {
+      backdrop-filter: blur(3px);
+      background-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 4px 3px rgba(205, 180, 219, 0.3);
+    }
   }
 
   &__image {
     height: 100%;
     flex: 1;
     @include breakpoint-down(md) {
-      border-radius: 14px;
+      border-radius: 18px 18px 26px 26px;
       overflow: hidden;
       position: absolute;
       top: 0;
@@ -127,7 +132,7 @@
   }
 
   &__buttons {
-    margin: 2rem 0;
+    margin: 3rem 0 0;
   }
 }
 </style>

@@ -30,15 +30,17 @@
   height: calc(100vh - var(--header-height));
   @include breakpoint-down(md) {
     --content-padding: 0;
-    margin-left: calc(var(--container-padding) * -1);
-    margin-right: calc(var(--container-padding) * -1);
+    margin-left: calc(var(--container-padding) * -0.5);
+    margin-right: calc(var(--container-padding) * -0.5);
   }
 
   &__container {
     display: flex;
     height: 100%;
-    column-gap: 10%;
-    padding: var(--content-padding);
+    background: url('~/assets/images/stripes.svg') no-repeat;
+    background-size: cover;
+    border-radius: 18px;
+    overflow: hidden;
     @include breakpoint-down(md) {
       position: relative;
       justify-content: space-between;
@@ -48,8 +50,8 @@
   &__content {
     display: flex;
     flex-direction: column;
-    width: 40%;
-    padding-top: 5%;
+    width: 50%;
+    padding: 4rem 5rem 3rem 3rem;
 
     @include breakpoint-down(md) {
       width: 100%;
@@ -58,6 +60,7 @@
       text-align: center;
       justify-content: space-between;
       color: #fff;
+      height: 90%;
 
       h1 {
         font-size: min(15vmin, 5.5rem);
@@ -69,7 +72,7 @@
     font-size: 3.5rem;
     margin: 0;
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
     @include breakpoint-up(md) {
     }
@@ -82,20 +85,27 @@
     font-size: 1.25rem;
     margin-bottom: 1rem;
     font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    backdrop-filter: blur(3px);
+    padding: 2rem 1.5rem;
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 3px rgba(205, 180, 219, 0.3);
+    overflow: hidden;
   }
 
   &__image {
     height: 100%;
     flex: 1;
     @include breakpoint-down(md) {
-      border-top-left-radius: 16px;
-      border-top-right-radius: 16px;
+      border-radius: 14px;
       overflow: hidden;
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
+      height: 90%;
       &::after {
         position: absolute;
         top: 0;

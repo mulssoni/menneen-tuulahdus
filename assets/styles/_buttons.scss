@@ -13,12 +13,12 @@
   &--primary {
     @extend .button;
     background-color: var(--color-primary);
-    color: var(--color-text);
+    color: var(--color-primary-800);
     border-bottom: 5px solid var(--color-primary-600);
 
     &:hover {
       background-color: var(--color-primary-600);
-      color: var(--color-text);
+      color: #fff;
       border-color: var(--color-primary-700);
     }
   }

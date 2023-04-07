@@ -18,12 +18,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
   height: var(--header-height);
+
+  & > * {
+    flex-basis: 1 1 33.33%;
+  }
 
   &__address {
     display: none;
-    @include breakpoint-up(md) {
+    @include breakpoint-up(xs) {
       display: flex;
       align-items: center;
       column-gap: 1rem;

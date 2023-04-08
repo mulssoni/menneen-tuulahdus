@@ -91,13 +91,13 @@ const submitForm = () => {
 
   .dates {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
   }
 
   .input-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     width: 100%;
     gap: 0.5rem;
 

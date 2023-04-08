@@ -20,10 +20,6 @@
   align-items: center;
   height: var(--header-height);
 
-  & > * {
-    flex-basis: 1 1 33.33%;
-  }
-
   &__address {
     display: none;
     @include breakpoint-up(xs) {
@@ -36,6 +32,8 @@
   }
 
   &__logo {
+    display: flex;
+    justify-content: center;
     img {
       width: 80px;
       height: auto;

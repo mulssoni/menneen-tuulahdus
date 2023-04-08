@@ -27,33 +27,37 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: calc(100vh - var(--header-height));
   @include breakpoint-down(md) {
     --content-padding: 0;
+    height: calc(100vh - var(--header-height));
     margin-left: calc(var(--container-padding) * -0.5);
     margin-right: calc(var(--container-padding) * -0.5);
   }
 
   &__container {
     display: flex;
-    height: 100%;
+    height: auto;
     background: url('~/assets/images/stripes.svg') no-repeat;
     background-size: cover;
     border-radius: 18px;
     overflow: hidden;
+    aspect-ratio: 16 / 9;
     /* border: 1px solid #000; */
     @include breakpoint-down(md) {
       position: relative;
       box-shadow: inset 0 0 0 1px #000;
       justify-content: space-between;
+      aspect-ratio: auto;
+      height: 100%;
     }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     width: 50%;
-    padding: 10% 5rem 3rem 3rem;
+    padding: 4rem 3rem 3rem;
 
     @include breakpoint-down(md) {
       width: 100%;
@@ -62,7 +66,7 @@
       text-align: center;
       justify-content: space-between;
       color: #fff;
-      height: 90%;
+      height: calc(100% - 60px);
 
       h1 {
         font-size: min(15vmin, 5.5rem);
@@ -110,7 +114,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      height: 90%;
+      height: calc(100% - 60px);
       &::after {
         position: absolute;
         top: 0;
@@ -132,7 +136,7 @@
   }
 
   &__buttons {
-    margin: 3rem 0 0;
+    margin: 1.5rem 0 0;
   }
 }
 </style>

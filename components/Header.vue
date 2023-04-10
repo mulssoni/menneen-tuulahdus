@@ -19,6 +19,9 @@
   justify-content: space-between;
   align-items: center;
   height: var(--header-height);
+  @include breakpoint-down(md) {
+    --header-height: calc(30px + 2rem);
+  }
 
   &__address {
     display: none;

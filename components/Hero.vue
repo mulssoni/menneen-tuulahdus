@@ -14,7 +14,7 @@
       </div>
       <div class="hero__image">
         <img
-          src="~/assets/images/menneen-tuulahdus-hero.jpg"
+          src="~/assets/images/menneen-tuulahdus-hero.jpeg"
           alt="placeholder"
         />
       </div>

@@ -14,7 +14,7 @@
       </div>
       <div class="hero__image">
         <img
-          src="https://images.ctfassets.net/yy7h14vfudc9/2KJ1OgyJXLUr3zIXczFaOb/003e2429954cbe8b5ab4158b903094bb/Dec_RPO_Email_Brochure_Tile_13861-S.png"
+          src="~/assets/images/menneen-tuulahdus-hero.jpg"
           alt="placeholder"
         />
       </div>

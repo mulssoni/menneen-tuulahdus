@@ -2,7 +2,7 @@
   <h1>Varaus</h1>
   <div class="booking">
     <div>
-      <ContactForm style="width: 350px" />
+      <ContactForm style="max-width: 350px" />
     </div>
     <!-- <div>
       <img

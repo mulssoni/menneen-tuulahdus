@@ -3,13 +3,16 @@
     <div class="hero__container">
       <div class="hero__content">
         <h1 class="hero__title">Menneen Tuulahdus</h1>
-        <p class="hero__text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          voluptates, quod, quia, voluptate quae voluptatem quibusdam
-          exercitationem quidem voluptatum quas quos.
-        </p>
+        <div class="hero__text">
+          <p>
+            Tervetuloa kirpputorille jossa on tilaa ja valoa.<br />
+            Meillä sinut otetaan ilolla vastaan!
+          </p>
+        </div>
         <div class="hero__buttons">
-          <button class="button--primary">Hae pöytää</button>
+          <NuxtLink to="/varaus" class="button--secondary">
+            Varaa pöytä
+          </NuxtLink>
         </div>
       </div>
       <div class="hero__image">
@@ -17,6 +20,17 @@
           src="~/assets/images/menneen-tuulahdus-hero.jpeg"
           alt="placeholder"
         />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          style="position: absolute; bottom: 0; left: 0; right: 0"
+        >
+          <path
+            fill="var(--color-primary)"
+            fill-opacity="1"
+            d="M0,224L80,202.7C160,181,320,139,480,149.3C640,160,800,224,960,245.3C1120,267,1280,245,1360,234.7L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+          ></path>
+        </svg>
       </div>
     </div>
   </div>
@@ -35,9 +49,9 @@
   }
 
   &__container {
+    position: relative;
     display: flex;
     height: auto;
-    background: url('~/assets/images/stripes.svg') no-repeat;
     background-size: cover;
     border-radius: 18px;
     overflow: hidden;
@@ -45,7 +59,7 @@
     /* border: 1px solid #000; */
     @include breakpoint-down(md) {
       position: relative;
-      box-shadow: inset 0 0 0 1px #000;
+      /* box-shadow: inset 0 0 0 1px #000; */
       justify-content: space-between;
       aspect-ratio: auto;
       height: 100%;
@@ -57,7 +71,7 @@
     flex-direction: column;
     justify-content: flex-start;
     width: 50%;
-    padding: 4rem 3rem 3rem;
+    padding: 3rem 3rem 3rem 0;
 
     @include breakpoint-down(md) {
       width: 100%;
@@ -66,7 +80,6 @@
       text-align: center;
       justify-content: space-between;
       color: #fff;
-      height: calc(100% - 60px);
 
       h1 {
         font-size: min(15vmin, 5.5rem);
@@ -90,31 +103,35 @@
 
   &__text {
     font-size: 1.25rem;
-    margin-bottom: 1rem;
-    font-weight: 300;
+    margin-bottom: 2rem;
+    font-weight: 400;
     font-family: 'Montserrat', sans-serif;
-    padding: 2rem 1.5rem;
-    border-radius: 18px;
-    overflow: hidden;
-    @include breakpoint-up(md) {
-      backdrop-filter: blur(3px);
-      background-color: rgba(255, 255, 255, 0.7);
-      box-shadow: 0 4px 3px rgba(205, 180, 219, 0.3);
+    line-height: 1.85;
+    &.blur {
+      @include breakpoint-up(md) {
+        padding: 2rem 1.5rem;
+        backdrop-filter: blur(3px);
+        background-color: rgba(255, 255, 255, 0.7);
+        box-shadow: 0 4px 3px rgba(205, 180, 219, 0.3);
+      }
     }
   }
 
   &__image {
     height: 100%;
     flex: 1;
+    overflow: hidden;
+    position: relative;
+    border-radius: 18px;
     @include breakpoint-down(md) {
-      border-radius: 18px 18px 26px 26px;
+      border-radius: 18px;
       overflow: hidden;
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      height: calc(100% - 60px);
+      height: 100%;
       &::after {
         position: absolute;
         top: 0;
@@ -129,7 +146,6 @@
     img {
       width: 100%;
       height: auto;
-      min-height: 100%;
       object-fit: cover;
       display: block;
     }
@@ -137,6 +153,7 @@
 
   &__buttons {
     margin: 1.5rem 0 0;
+    z-index: 1;
   }
 }
 </style>

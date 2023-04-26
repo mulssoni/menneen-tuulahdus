@@ -38,10 +38,6 @@ const navItems = [
     path: '/',
   },
   {
-    name: 'Hinnasto',
-    path: '/hinnasto',
-  },
-  {
     name: 'Varaus',
     path: '/varaus',
   },
@@ -108,19 +104,6 @@ const navItems = [
 
       &.router-link-exact-active {
         color: var(--color-primary);
-        /* position: relative; */
-
-        /* &::after {
-          --size: 6px;
-          width: var(--size);
-          height: var(--size);
-          position: absolute;
-          left: 50%;
-          bottom: -5px;
-          border-radius: 50%;
-          background-color: var(--color-primary);
-          content: '';
-        } */
       }
 
       &:hover {

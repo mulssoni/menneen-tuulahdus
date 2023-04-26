@@ -1,5 +1,5 @@
 .button {
-  border-radius: 14px;
+  border-radius: 18px;
   padding: 1rem 1.5rem;
   font-weight: 700;
   font-family: var(--font-family);
@@ -9,6 +9,9 @@
   text-transform: uppercase;
   cursor: pointer;
   color: var(--color-brown);
+  text-decoration: none;
+  font-size: 0.85rem;
+  text-transform: uppercase;
 
   &--primary {
     @extend .button;

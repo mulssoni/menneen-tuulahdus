@@ -115,19 +115,18 @@ const submitForm = () => {
     input[type='phone'] {
       width: 100%;
       padding: 0.85rem;
-      font-size: 1.2rem;
+      font-size: 1rem;
       outline: none;
       border: none;
-      border: 1px solid var(--color-primary);
-      border-bottom: 5px solid var(--color-primary-600);
+      border: 1px solid rgba(0, 0, 0, 0.3);
       border-radius: 8px;
       background-color: #fff;
       transition: border-color 0.25s ease-out;
 
-      &:focus,
+      /* &:focus,
       &:valid {
-        border-color: var(--color-primary-700);
-      }
+        border-color: var(--color-primary);
+      } */
     }
     input[type='checkbox'] {
       width: 1.5rem;

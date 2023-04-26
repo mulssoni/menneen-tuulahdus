@@ -5,7 +5,9 @@
       <span class="line"></span>
     </div>
     <div class="header__logo">
-      <img src="~/assets/images/menneen-tuulahdus-logo.svg" alt="logo" />
+      <NuxtLink to="/">
+        <img src="~/assets/images/menneen-tuulahdus-logo.svg" alt="logo" />
+      </NuxtLink>
     </div>
     <div class="header__menu">
       <Navigation />
@@ -16,16 +18,19 @@
 <style lang="scss" scoped>
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: var(--header-height);
   @include breakpoint-down(md) {
     --header-height: calc(30px + 2rem);
   }
 
+  & > * {
+    flex: 1;
+  }
+
   &__address {
     display: none;
-    @include breakpoint-up(xs) {
+    @include breakpoint-up(sm) {
       display: flex;
       align-items: center;
       column-gap: 1rem;
@@ -37,6 +42,9 @@
   &__logo {
     display: flex;
     justify-content: center;
+    @include breakpoint-down(sm) {
+      justify-content: flex-start;
+    }
     img {
       width: 80px;
       height: auto;
@@ -44,6 +52,11 @@
       align-items: center;
       justify-content: center;
     }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 .line {

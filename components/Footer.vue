@@ -19,7 +19,10 @@
       </ul>
     </div>
     <div class="footer__socials">
-      <a href="https://www.facebook.com/menneen-tuulahdus/" target="_blank">
+      <a
+        href="https://www.facebook.com/profile.php?id=100068307363115"
+        target="_blank"
+      >
         <img src="/icons/square-facebook.svg" alt="facebook" />
       </a>
       <a href="https://www.instagram.com/menneentuulahdus/" target="_blank">

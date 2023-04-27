@@ -1,73 +1,91 @@
 <template>
-  <form @submit.prevent="submitForm">
-    <div class="booking-form">
-      <div class="input-container">
-        <label for="name">Nimi</label>
-        <input v-model="data.name" type="text" id="name" name="name" required />
-      </div>
-      <div class="input-container">
-        <label for="email">Sähköposti</label>
-        <input
-          v-model="data.email"
-          type="email"
-          id="email"
-          name="email"
-          required
-        />
-      </div>
-      <div class="input-container">
-        <label for="phone">Puhelinnumero</label>
-        <input
-          v-model="data.phone"
-          type="phone"
-          id="phone"
-          name="phone"
-          required
-        />
-      </div>
-      <div class="input-container">
-        <label for="city">Kaupunki</label>
-        <input v-model="data.city" type="text" id="city" name="city" required />
-      </div>
-      <div class="input-container checkbox">
-        <input
-          type="checkbox"
-          id="fifty-fifty"
-          name="fifty-fifty"
-          v-model="data.fiftyFifty"
-        />
-        <label for="fifty-fifty">50-50 palvelu</label>
-      </div>
-      <div class="dates">
-        <div v-if="!data.fiftyFifty" class="input-container">
-          <label for="start-date">Alkamispäivä</label>
+  <section class="contact-form">
+    <h2>Varaus</h2>
+    <form style="width: 350px" @submit.prevent="submitForm">
+      <div class="booking-form">
+        <div class="input-container">
+          <label for="name">Nimi</label>
           <input
-            v-model="data.startDate"
-            type="date"
-            id="start-date"
-            name="start-date"
+            id="name"
+            v-model="data.name"
+            type="text"
+            name="name"
             required
           />
         </div>
-        <div v-if="!data.fiftyFifty" class="input-container">
-          <label for="end-date">Loppumispäivä</label>
+        <div class="input-container">
+          <label for="email">Sähköposti</label>
           <input
-            v-model="data.endDate"
-            type="date"
-            id="end-date"
-            name="end-date"
+            id="email"
+            v-model="data.email"
+            type="email"
+            name="email"
             required
           />
         </div>
+        <div class="input-container">
+          <label for="phone">Puhelinnumero</label>
+          <input
+            id="phone"
+            v-model="data.phone"
+            type="phone"
+            name="phone"
+            required
+          />
+        </div>
+        <div class="input-container">
+          <label for="city">Kaupunki</label>
+          <input
+            id="city"
+            v-model="data.city"
+            type="text"
+            name="city"
+            required
+          />
+        </div>
+        <div class="input-container checkbox">
+          <input
+            id="fifty-fifty"
+            v-model="data.fiftyFifty"
+            type="checkbox"
+            name="fifty-fifty"
+          />
+          <label for="fifty-fifty">50-50 palvelu</label>
+        </div>
+        <div class="dates">
+          <div v-if="!data.fiftyFifty" class="input-container">
+            <label for="start-date">Alkamispäivä</label>
+            <input
+              id="start-date"
+              v-model="data.startDate"
+              type="date"
+              name="start-date"
+              required
+            />
+          </div>
+          <div v-if="!data.fiftyFifty" class="input-container">
+            <label for="end-date">Loppumispäivä</label>
+            <input
+              id="end-date"
+              v-model="data.endDate"
+              type="date"
+              name="end-date"
+              required
+            />
+          </div>
+        </div>
+        <button
+          class="button--primary"
+          type="submit"
+          @click.prevent="submitForm"
+        >
+          Lähetä
+        </button>
       </div>
-      <button @click.prevent="submitForm" class="button--primary" type="submit">
-        Lähetä
-      </button>
-    </div>
-  </form>
+    </form>
+  </section>
 </template>
 <script setup>
-const TODAY = new Date()
 const data = reactive({
   name: '',
   email: '',
@@ -83,6 +101,12 @@ const submitForm = () => {
 }
 </script>
 <style lang="scss" scoped>
+.contact-form > h2 {
+  font-size: 2rem;
+  @include breakpoint-down(sm) {
+    text-align: center;
+  }
+}
 .booking-form {
   display: flex;
   flex-direction: column;

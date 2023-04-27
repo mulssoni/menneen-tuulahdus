@@ -1,25 +1,35 @@
 <template>
-  <div class="booking">
-    <div>
-      <h1>Varaus</h1>
-      <ContactForm style="width: 350px" />
+  <div>
+    <div class="booking">
+      <ContactForm />
+      <PricingList />
     </div>
-    <PricingList />
-  </div>
-  <div class="notification" style="margin-top: 5rem">
-    <b>HUOM!</b>
-    <p>Emme peri myyntiprovisiosta asiakkaalta itsepalvelupöydästä.</p>
-    <p>
-      Yksi myyntiviikko kirpputorilla on 6 vuorokautta ja kaksi viikkoa 12
-      vuorokautta.
-    </p>
-    <p>
-      Määräaikaan mennessä tyhjentämättömän pöydän tyhjennyksestä on
-      lisäveloitus <b>10 €</b>
-    </p>
+    <div class="notification" style="margin-top: 5rem">
+      <b>HUOM!</b>
+      <p>Emme peri myyntiprovisiosta asiakkaalta itsepalvelupöydästä.</p>
+      <p>
+        Yksi myyntiviikko kirpputorilla on 6 vuorokautta ja kaksi viikkoa 12
+        vuorokautta.
+      </p>
+      <p>
+        Määräaikaan mennessä tyhjentämättömän pöydän tyhjennyksestä on
+        lisäveloitus <b>10 €</b>
+      </p>
+    </div>
   </div>
 </template>
-
+<script setup lang="ts">
+useHead({
+  title: 'Varaus - Kirpputori Jämsä | Menneen Tuulahdus',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Tule meille myymään ja tekemään löytöjä Menneen Tuulahduksen kirpputorille. Meillä myös prosenttimyynti 50/50 palvelulla. Lämpimästi tervetuloa!',
+    },
+  ],
+})
+</script>
 <style lang="scss" scoped>
 ul {
   margin: 0;
@@ -31,7 +41,7 @@ ul {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  gap: 3rem;
+  gap: 0 3rem;
   flex-wrap: wrap;
   @include breakpoint-down(md) {
     justify-content: center;

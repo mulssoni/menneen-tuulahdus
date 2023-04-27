@@ -1,5 +1,5 @@
 <template>
-  <div class="pricing">
+  <section class="pricing">
     <h2>Hinnasto</h2>
     <span>Kuusi vuorokautta</span>
     <div style="display: flex; flex-direction: column; align-items: center">
@@ -19,7 +19,7 @@
         </ul>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 <script setup lang="ts">
 const items = [

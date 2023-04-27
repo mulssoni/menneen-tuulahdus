@@ -61,3 +61,22 @@ img {
 a {
   color: inherit;
 }
+
+section {
+  padding: 5rem 0;
+
+  @include breakpoint-down(sm) {
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}

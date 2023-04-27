@@ -1,10 +1,10 @@
 <template>
   <nav :class="`nav ${isOpen ? 'open' : ''}`">
     <button
-      @click="toggleNav"
       class="button__toggle-nav button--link"
       role="button"
       aria-label="Toggle navigation"
+      @click="toggleNav"
     >
       <span class="line"></span>
       <span class="line"></span>
@@ -14,9 +14,9 @@
       <ul class="nav__list" role="navigation">
         <li
           v-for="item in navItems"
+          :key="item.name"
           class="nav__item"
           @click="closeNav"
-          :key="item.name"
         >
           <NuxtLink :to="item.path">{{ item.name }}</NuxtLink>
         </li>
@@ -24,7 +24,7 @@
     </div>
   </nav>
 </template>
-<script setup>
+<script setup lang="ts">
 const isOpen = ref(false)
 const toggleNav = () => {
   isOpen.value = !isOpen.value

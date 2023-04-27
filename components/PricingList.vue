@@ -58,7 +58,7 @@ const includes = [
   'Hälyttimet',
   '3 paperiarkkia',
   'Henkarit',
-  'Arvokkaampien tuotteiden säilytys kassalla tai vitriinissä (max 2kpl / asiakas)',
+  'Arvokkaampien tuotteiden säilytys kassalla tai vitriinissä (max. 2 kpl / asiakas)',
 ]
 </script>
 
@@ -86,6 +86,7 @@ ul {
   margin: 2rem 0;
   display: flex;
   gap: 1rem;
+  max-width: 400px;
   flex-direction: column;
   justify-content: center;
   &__item {
@@ -115,6 +116,7 @@ ul {
   @extend .price-list;
   flex-direction: row;
   flex-wrap: wrap;
+  max-width: 400px;
   &__item {
     @extend .price-list__item;
     min-width: auto;

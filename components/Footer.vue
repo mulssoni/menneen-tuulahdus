@@ -7,7 +7,7 @@
         <li>
           <a href="mailto:info@menneentuulahdus.fi">info@menneentuulahdus.fi</a>
         </li>
-        <li><a href="tel:+358 40 704 4697">040 704 4697</a></li>
+        <li><a href="tel:+358 40 704 4697">+358 40 704 4697</a></li>
       </ul>
     </div>
     <div class="footer__hours">
@@ -32,7 +32,7 @@
   </footer>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 ul {
   list-style: none;
   margin: 0;
@@ -62,6 +62,12 @@ ul {
       width: 300px;
       height: auto;
     }
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__hours {
@@ -89,10 +95,6 @@ ul {
       height: auto;
       max-height: 30px;
     }
-  }
-
-  a {
-    text-decoration: none;
   }
 }
 </style>

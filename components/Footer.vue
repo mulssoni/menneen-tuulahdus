@@ -44,7 +44,7 @@ ul {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin-top: 10rem;
+  margin-top: 8rem;
   padding: 5rem 0rem;
   gap: 2rem;
 

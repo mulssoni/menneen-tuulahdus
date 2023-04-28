@@ -2,20 +2,18 @@
   <div class="accordion">
     <div class="accordion__header" role="button" @click="toggleAccordion">
       <span class="title">{{ props.title }}</span>
-      <span class="indicator">{{ isOpen ? '-' : '+' }}</span>
+      <span class="indicator">{{ isOpen ? '–' : '+' }}</span>
     </div>
     <div
       ref="content"
       :class="`accordion__content ${isOpen ? 'open' : ''}`"
-      :style="`height: ${isOpen ? openHeight : '0px'}`"
+      :style="`height: ${isOpen ? openHeight : '0px'}; ${
+        isOpen ? 'display: flex; align-items: center' : ''
+      }`"
     >
-      <slot />
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam Lorem
-      ipsum dolor sit amet consectetur adipisicing elit. Quisquam Lorem ipsum
-      dolor sit amet consectetur adipisicing elit. Quisquam Lorem ipsum dolor
-      sit amet consectetur adipisicing elit. Quisquam Lorem ipsum dolor sit amet
-      consectetur adipisicing elit. Quisquam Lorem ipsum dolor sit amet
-      consectetur adipisicing elit. Quisquam
+      <div>
+        <slot />
+      </div>
     </div>
   </div>
 </template>
@@ -34,7 +32,7 @@ const openHeight = ref('0px')
 
 onMounted(() => {
   if (content.value) {
-    openHeight.value = `${content.value.scrollHeight}px`
+    openHeight.value = `${content.value.scrollHeight + 18 + 128}px`
   }
 })
 const isOpen = ref(false)
@@ -72,7 +70,7 @@ const toggleAccordion = () => {
   }
 
   &__content {
-    padding: 0;
+    padding: 0 2.5rem;
     border: 1px solid var(--color-primary);
     border-top: none;
     border-radius: 0 0 18px 18px;
@@ -82,10 +80,6 @@ const toggleAccordion = () => {
     position: relative;
     top: -18px;
     background-color: rgba(0, 0, 0, 0.03);
-
-    &.open {
-      padding: calc(3rem + 18px) 2.5rem 3rem 2.5rem;
-    }
   }
 }
 </style>

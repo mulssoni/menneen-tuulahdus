@@ -57,7 +57,7 @@
                 src="/icons/circle-question.svg"
                 alt="Kysymysmerkki"
                 class="icon"
-                style="margin-left: 1rem"
+                style="margin-left: 0.5rem"
               />
             </NuxtLink>
           </label>

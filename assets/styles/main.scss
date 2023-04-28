@@ -55,7 +55,7 @@ img {
 
 .notification {
   border-radius: 18px;
-  padding: 1.5rem 2.5rem;
+  padding: 2rem 2.5rem;
   border: 1px solid var(--color-primary);
   background-color: rgba(0, 0, 0, 0.03);
 
@@ -69,7 +69,7 @@ a {
 }
 
 section {
-  padding: 5rem 0;
+  padding: 4rem 0;
 
   @include breakpoint-down(sm) {
     &:not(:last-child) {

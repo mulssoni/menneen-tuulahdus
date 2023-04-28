@@ -50,7 +50,17 @@
             type="checkbox"
             name="fifty-fifty"
           />
-          <label for="fifty-fifty">50-50 palvelu</label>
+          <label for="fifty-fifty"
+            >50-50 palvelu
+            <NuxtLink to="#fifty-fifty-service">
+              <img
+                src="/icons/circle-question.svg"
+                alt="Kysymysmerkki"
+                class="icon"
+                style="margin-left: 1rem"
+              />
+            </NuxtLink>
+          </label>
         </div>
         <div class="dates">
           <div v-if="!data.fiftyFifty" class="input-container">

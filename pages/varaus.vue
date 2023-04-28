@@ -16,6 +16,10 @@
         lisäveloitus <b>10 €</b>
       </p>
     </div>
+    <FiftyFiftyAccordion
+      id="fifty-fifty-service"
+      title="Lue lisää 50 / 50 -palvelusta"
+    />
   </div>
 </template>
 <script setup lang="ts">

@@ -1,0 +1,91 @@
+<template>
+  <div class="accordion">
+    <div class="accordion__header" role="button" @click="toggleAccordion">
+      <span class="title">{{ props.title }}</span>
+      <span class="indicator">{{ isOpen ? '-' : '+' }}</span>
+    </div>
+    <div
+      ref="content"
+      :class="`accordion__content ${isOpen ? 'open' : ''}`"
+      :style="`height: ${isOpen ? openHeight : '0px'}`"
+    >
+      <slot />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Quisquam Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Quisquam Lorem ipsum dolor
+      sit amet consectetur adipisicing elit. Quisquam Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Quisquam Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Quisquam
+    </div>
+  </div>
+</template>
+<script setup lang="ts">
+import { defineProps } from 'vue'
+interface PropsInterface {
+  title: string
+}
+
+const props = withDefaults(defineProps<PropsInterface>(), {
+  title: '',
+})
+
+const content = ref<any>(null)
+const openHeight = ref('0px')
+
+onMounted(() => {
+  if (content.value) {
+    openHeight.value = `${content.value.scrollHeight}px`
+  }
+})
+const isOpen = ref(false)
+
+const toggleAccordion = () => {
+  isOpen.value = !isOpen.value
+}
+</script>
+
+<style lang="scss" scoped>
+.accordion {
+  width: 100%;
+
+  &__header {
+    cursor: pointer;
+    padding: 2rem calc(50px + 1rem) 2rem 2.5rem;
+    font-size: 1.1rem;
+    background-color: var(--color-primary);
+    border-radius: 18px;
+    font-weight: 600;
+    border: 1px solid var(--color-primary-600);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+
+    .indicator {
+      position: absolute;
+      width: 50px;
+      right: 0;
+      top: 50%;
+      line-height: 0;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__content {
+    padding: 0;
+    border: 1px solid var(--color-primary);
+    border-top: none;
+    border-radius: 0 0 18px 18px;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.25s ease-out;
+    position: relative;
+    top: -18px;
+    background-color: rgba(0, 0, 0, 0.03);
+
+    &.open {
+      padding: calc(3rem + 18px) 2.5rem 3rem 2.5rem;
+    }
+  }
+}
+</style>

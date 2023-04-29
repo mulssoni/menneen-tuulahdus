@@ -51,7 +51,7 @@
             name="fifty-fifty"
           />
           <label for="fifty-fifty"
-            >50-50 palvelu
+            >50/50 palvelu
             <NuxtLink to="#fifty-fifty-service">
               <img
                 src="/icons/circle-question.svg"

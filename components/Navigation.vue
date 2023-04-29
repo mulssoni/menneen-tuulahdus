@@ -46,10 +46,6 @@ const navItems = [
     path: '/ohjeet',
   },
   {
-    name: 'Ostetaan',
-    path: '/ostetaan',
-  },
-  {
     name: 'Yhteystiedot',
     path: '/yhteystiedot',
   },

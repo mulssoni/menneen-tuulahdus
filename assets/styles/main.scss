@@ -69,7 +69,7 @@ a {
 }
 
 section {
-  padding: 4rem 0;
+  padding: 3rem 0;
 
   @include breakpoint-down(sm) {
     &:not(:last-child) {
@@ -87,10 +87,28 @@ h6 {
   margin-top: 0;
 }
 
+h1.title {
+  font-size: 2rem;
+}
+
 .icon {
   color: var(--color-primary);
   height: 1.25rem;
   width: 1.25rem;
   display: inline-block;
   vertical-align: text-bottom;
+}
+
+.divider-list {
+  display: flex;
+  flex-direction: column;
+
+  li {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    &:first-child {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
 }

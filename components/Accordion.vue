@@ -32,7 +32,7 @@ const openHeight = ref('0px')
 
 onMounted(() => {
   if (content.value) {
-    openHeight.value = `${content.value.scrollHeight + 18 + 128}px`
+    openHeight.value = `${content.value.scrollHeight + 18 + 112}px`
   }
 })
 const isOpen = ref(false)
@@ -48,9 +48,9 @@ const toggleAccordion = () => {
 
   &__header {
     cursor: pointer;
-    padding: 2rem calc(50px + 1rem) 2rem 2.5rem;
+    padding: 1rem calc(50px + 1rem) 1rem 2.5rem;
     font-size: 1.1rem;
-    background-color: var(--color-primary);
+    background-color: #000;
     border-radius: 18px;
     font-weight: 600;
     border: 1px solid var(--color-primary-600);
@@ -58,6 +58,7 @@ const toggleAccordion = () => {
     display: flex;
     justify-content: space-between;
     z-index: 1;
+    color: #fff;
 
     .indicator {
       position: absolute;

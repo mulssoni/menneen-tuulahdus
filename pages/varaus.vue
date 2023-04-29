@@ -17,11 +17,8 @@
       </p>
     </div>
     <div style="margin: 1rem 0">
-      <FiftyFiftyAccordion
-        id="fifty-fifty-service"
-        title="Mikä on 50 / 50 -palvelu?"
-      >
-        <ul class="fifty-fifty__list">
+      <Accordion id="fifty-fifty-service" title="Mikä on 50/50 -palvelu?">
+        <ul class="fifty-fifty__list divider-list">
           <li>
             Palvelu alkaa aina henkilökunnan kanssa yhdessä sovittuna
             ajankohtana.
@@ -90,7 +87,7 @@
           </li>
           <li>Hyviä yhteisiä myyntejä toivottaa <b>Menneen Tuulahdus!</b>!</li>
         </ul>
-      </FiftyFiftyAccordion>
+      </Accordion>
     </div>
   </div>
 </template>
@@ -121,20 +118,6 @@ ul {
   flex-wrap: wrap;
   @include breakpoint-down(md) {
     justify-content: center;
-  }
-}
-
-.fifty-fifty__list {
-  display: flex;
-  flex-direction: column;
-
-  li {
-    padding: 1.5rem 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-    &:first-child {
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
-    }
   }
 }
 </style>

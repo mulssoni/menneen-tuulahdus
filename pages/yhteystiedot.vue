@@ -1,14 +1,6 @@
 <template>
   <section class="contacts">
-    <div
-      style="
-        display: flex;
-        gap: 3rem 5rem;
-        flex-wrap: wrap;
-        justify-content: center;
-        font-size: 1.25rem;
-      "
-    >
+    <div class="container">
       <div class="footer__barcode">
         <h1>Yhteystiedot</h1>
         <ul>
@@ -45,6 +37,19 @@
 </template>
 
 <style lang="scss" scoped>
+.container {
+  display: flex;
+  gap: 3rem 5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1.25rem;
+  @include breakpoint-down(md) {
+    justify-content: center;
+    & > * {
+      min-width: 300px;
+    }
+  }
+}
 ul {
   list-style-type: none;
   list-style: none;

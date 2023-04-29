@@ -4,7 +4,7 @@
       <ContactForm />
       <PricingList />
     </div>
-    <div class="notification" style="margin-top: 5rem">
+    <div class="notification">
       <b>HUOM!</b>
       <p>Emme peri myyntiprovisiosta asiakkaalta itsepalvelupöydästä.</p>
       <p>
@@ -96,7 +96,7 @@
 </template>
 <script setup lang="ts">
 useHead({
-  title: 'Varaus - Kirpputori Jämsä | Menneen Tuulahdus',
+  title: 'Varaus',
   meta: [
     {
       name: 'description',

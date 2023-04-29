@@ -1,5 +1,5 @@
 <template>
-  <section class="contact-form">
+  <div class="contact-form">
     <h2>Varaus</h2>
     <form style="width: 350px" @submit.prevent="submitForm">
       <div class="booking-form">
@@ -93,7 +93,7 @@
         </button>
       </div>
     </form>
-  </section>
+  </div>
 </template>
 <script setup lang="ts">
 const data = reactive({

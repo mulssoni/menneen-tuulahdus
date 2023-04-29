@@ -1,8 +1,12 @@
 <template>
   <div>
     <div class="booking">
-      <ContactForm />
-      <PricingList />
+      <section>
+        <ContactForm />
+      </section>
+      <section>
+        <PricingList />
+      </section>
     </div>
     <div class="notification">
       <b>HUOM!</b>
@@ -18,75 +22,7 @@
     </div>
     <div style="margin: 1rem 0">
       <Accordion id="fifty-fifty-service" title="Mikä on 50/50 -palvelu?">
-        <ul class="fifty-fifty__list divider-list">
-          <li>
-            Palvelu alkaa aina henkilökunnan kanssa yhdessä sovittuna
-            ajankohtana.
-          </li>
-          <li>Aloituksen tuotemäärä on max 5 laatikkoa/kassia.</li>
-          <li>
-            Laatikoiden/kassien tulee olla sellaisia jotka saavat jäädä
-            kirpputorille.
-          </li>
-          <li>
-            Kun sovit henkilökunnan kanssa 50%50 palvelun aloituksen, saat
-            myyjältä henkilökohtaisen asiakasnumeron ja tunnukset kirpparikalle
-            - palveluun, jossa voit seurata saldoa reaaliajassa.
-          </li>
-          <li>
-            Saldon näkymä on asiakkaan sekä kirpputorin yhteinen saldo. Tästä
-            summasta puolitetaan tilityksen yhteydessä puolet asiakkaalle ja
-            puolet kirpputorille.
-          </li>
-          <li>
-            Tilitys tapahtuu automaattisesti tilille myyntiajan loputtua, mikäli
-            asiakas ei ole erikseen pyytänyt välitilitystä Välitilitys on
-            mahdollista (vähimmäisväli 1 viikko).
-          </li>
-          <li>
-            Myyntiaika 50%50 palvelulla on noin kuukausi. Kuukauden aikana saa
-            tuoda lisää tuotteita erikseen sovittuna ajankohtana (tavaran
-            tuonneille on myymälässä oma varauskalenteri).
-          </li>
-          <li>
-            Pöydän tuotemäärä ei voi kasvaa liian suureksi, joten varauduthan
-            viemään osan vanhoista tuotteista pois, jos haluat tuoda uusia
-            tuotteita. <b>Siisti pöytä myy aina parhaiten!</b>.
-          </li>
-          <li>
-            Tuotteiden tulee olla siistejä, puhtaita ja ehjiä! (emme hinnoittele
-            rikkinäisiä tai likaisia tuotteita) .
-          </li>
-          <li>
-            Tuotteita tuodessasi numeroithan kassisi/laatikkosi omalla
-            asiakasnumerollasi ja nimelläsi.
-          </li>
-          <li>
-            Tuotteet tulee pakata kategorioittain (vaatteet, tavarat, kengät
-            yms. omiin kasseihin/laatikoihin, etteivät tuotteet rikkoonnu tai
-            likaannu matkalla kirpputorille).
-          </li>
-          <li>
-            Kirpputori hinnoittelee tuotteet käsin kirjoittamalla, joten
-            tuotekohtaista seurantaa (tuotekuvauksen kera) ei ole mahdollista
-            50%50 palvelulla.
-          </li>
-          <li>
-            Mikäli asiakas haluaa tuotekohtaisen seurannan, tulisi asiakkaan
-            vuokrata itsepalvelu pöytä ja hinnoitella tuotteet tietokoneen
-            kautta.
-          </li>
-          <li>
-            Myyntiajan loppuessa sovitaan asiakkaan kanssa yhdessä mahdollinen
-            alennusprosentti viimeiseksi viikoksi, sekä lopetuspäivä.
-          </li>
-          <li>
-            Asiakas voi tulla hakemaan kaikki loput tuotteensa lopetuspäivänä,
-            mutta tuotteet saa jättää myös lahjoituksena kirpparille, mikäli
-            niitä ei halua enää kotiin viedä.
-          </li>
-          <li>Hyviä yhteisiä myyntejä toivottaa <b>Menneen Tuulahdus!</b>!</li>
-        </ul>
+        <FiftyFiftyService />
       </Accordion>
     </div>
   </div>
@@ -112,9 +48,9 @@ ul {
 }
 .booking {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
-  gap: 0 3rem;
+  gap: 0 5rem;
   flex-wrap: wrap;
   @include breakpoint-down(md) {
     justify-content: center;

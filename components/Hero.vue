@@ -5,7 +5,7 @@
         <h1 class="hero__title">Menneen Tuulahdus</h1>
         <div class="hero__text">
           <p>
-            Tervetuloa kirpputorille jossa on tilaa ja valoa.<br />
+            Tervetuloa kirpputorille Jämsään, jossa on tilaa ja valoa.<br />
             Meillä sinut otetaan ilolla vastaan!
           </p>
         </div>

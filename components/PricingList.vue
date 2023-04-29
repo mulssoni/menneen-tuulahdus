@@ -1,8 +1,8 @@
 <template>
-  <section class="pricing">
+  <div class="pricing">
     <h2>Hinnasto</h2>
     <span>Kuusi vuorokautta</span>
-    <div style="display: flex; flex-direction: column; align-items: center">
+    <div style="display: flex; flex-direction: column">
       <ul class="price-list">
         <li v-for="item in items" :key="item.name" class="price-list__item">
           <span><img :src="`/icons/${item.icon}.svg`" :alt="item.name" /></span>
@@ -10,7 +10,7 @@
           <span>{{ item.price }}</span>
         </li>
       </ul>
-      <div class="text-center">
+      <div>
         <h2>Sisältää</h2>
         <ul class="includes-list">
           <li v-for="item in includes" :key="item" class="includes-list__item">
@@ -19,7 +19,7 @@
         </ul>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 <script setup lang="ts">
 const items = [
@@ -58,7 +58,7 @@ const includes = [
   'Hälyttimet',
   '3 paperiarkkia',
   'Henkarit',
-  'Arvokkaampien tuotteiden säilytys kassalla tai vitriinissä (max. 2 kpl / asiakas)',
+  'Arvoikkaiden tuotteiden säilytys kassalla tai vitriinissä*',
 ]
 </script>
 
@@ -73,8 +73,10 @@ ul {
 .pricing {
   display: flex;
   flex-direction: column;
-  align-items: center;
   flex: 1;
+  @include breakpoint-down(md) {
+    align-items: center;
+  }
 
   h2 {
     font-size: 2rem;
@@ -93,7 +95,7 @@ ul {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0;
     column-gap: 1.5rem;
     min-width: 375px;
 
@@ -117,11 +119,19 @@ ul {
   flex-direction: row;
   flex-wrap: wrap;
   max-width: 400px;
+  justify-content: flex-start;
   &__item {
     @extend .price-list__item;
     min-width: auto;
     border-radius: 18px;
-    background-color: var(--color-primary);
+    padding: 0.85rem 1.25rem;
+    border: 1px solid var(--color-primary);
+  }
+}
+
+@include breakpoint-down(md) {
+  h2 {
+    text-align: center;
   }
 }
 </style>

@@ -1,7 +1,17 @@
 <template>
-  <div class="contact-form" name="yhteydenotto" netlify>
+  <div class="contact-form" name="yhteydenotto">
     <h2>Varaus</h2>
-    <form style="width: 350px" @submit.prevent="submitForm">
+    <form
+      style="width: 350px"
+      method="POST"
+      data-netlify="true"
+      @submit="submitForm"
+    >
+      <input
+        type="hidden"
+        name="subject"
+        :value="`Yhteydenotto ${data.name}`"
+      />
       <div class="booking-form">
         <div class="input-container">
           <label for="name">Nimi</label>
@@ -85,29 +95,91 @@
           </div>
         </div>
         <button
-          class="button--primary"
+          :class="isSuccess ? 'button--success' : 'button--primary'"
           type="submit"
-          @click.prevent="submitForm"
         >
-          Lähetä
+          {{
+            isSubmitting ? 'Lähetetään' : isSuccess ? 'Lähetetty 😊' : 'Lähetä'
+          }}
         </button>
+        <div v-if="error" class="notification">
+          {{ error }}
+        </div>
       </div>
     </form>
   </div>
 </template>
 <script setup lang="ts">
-const data = reactive({
+import { addDays, format } from 'date-fns'
+const toISODate = (date: Date) => date.toISOString().split('T')[0]
+
+const TODAY = new Date()
+const SIX_DAYS_FROM_TODAY = addDays(TODAY, 6)
+
+const isSubmitting = ref(false)
+const isSuccess = ref(false)
+const error = ref('')
+const initData = {
   name: '',
   email: '',
   phone: '',
   city: '',
   fiftyFifty: false,
-  startDate: null,
-  endDate: null,
-})
+  startDate: toISODate(TODAY),
+  endDate: toISODate(SIX_DAYS_FROM_TODAY),
+}
+const data = ref({ ...initData })
 
-const submitForm = () => {
-  console.log(data)
+const resetForm = () => {
+  data.value = { ...initData }
+}
+
+const submitForm = async (e: {
+  stopPropagation: () => void
+  preventDefault: () => void
+}): Promise<void> => {
+  e.stopPropagation()
+  e.preventDefault()
+
+  const submitData = {
+    ...data,
+    startDate: format(new Date(data.value.startDate), 'dd.MM.yyyy'),
+    endDate: format(new Date(data.value.endDate), 'dd.MM.yyyy'),
+  }
+
+  const formData = new FormData()
+  const keys = Object.keys(submitData)
+
+  keys.forEach((key) => {
+    formData.append(key, submitData[key as keyof typeof submitData].toString())
+  })
+  formData.delete('fiftyFifty')
+
+  if (data.value.fiftyFifty) {
+    formData.delete('startDate')
+    formData.delete('endDate')
+  }
+
+  try {
+    error.value = ''
+    isSubmitting.value = false
+    isSubmitting.value = true
+
+    const res = await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData as any).toString(),
+    })
+    if (!res.ok) {
+      throw new Error('Varauksen lähetys epäonnistui')
+    }
+    isSuccess.value = true
+    resetForm()
+  } catch (err) {
+    error.value = (err as Error).message
+  } finally {
+    isSubmitting.value = false
+  }
 }
 </script>
 <style lang="scss" scoped>

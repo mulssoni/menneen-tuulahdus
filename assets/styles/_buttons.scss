@@ -39,6 +39,13 @@
     }
   }
 
+  &--success {
+    @extend .button;
+    background-color: #b4dbbd;
+    color: var(--color-text);
+    border-bottom: 5px solid #85a28c;
+  }
+
   &--link {
     @extend .button;
     background-color: transparent;

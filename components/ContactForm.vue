@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-form">
+  <div class="contact-form" name="yhteydenotto" netlify>
     <h2>Varaus</h2>
     <form style="width: 350px" @submit.prevent="submitForm">
       <div class="booking-form">

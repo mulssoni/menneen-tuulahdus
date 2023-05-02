@@ -165,7 +165,7 @@ const submitForm = async (e: {
     isSubmitting.value = false
     isSubmitting.value = true
 
-    const res = await fetch('/varaus', {
+    const res = await fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(formData as any).toString(),

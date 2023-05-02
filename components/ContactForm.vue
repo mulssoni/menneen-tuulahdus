@@ -15,11 +15,6 @@
           Don’t fill this out if you’re human: <input name="bot-field" />
         </label>
       </p>
-      <input
-        type="hidden"
-        name="subject"
-        :value="`Yhteydenotto ${data.name}`"
-      />
       <div class="booking-form">
         <div class="input-container">
           <label for="name">Nimi</label>
@@ -184,7 +179,11 @@ const submitForm = async (e: {
     const res = await fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'Varaus', ...submitData }),
+      body: encode({
+        'form-name': 'Varaus',
+        subject: `Varaus - ${data.value.name}`,
+        ...submitData,
+      }),
     })
     if (!res.ok) {
       throw new Error('Varauksen lähetys epäonnistui')

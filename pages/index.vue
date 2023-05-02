@@ -11,7 +11,7 @@
       <p>
         Oletko tuomassa tuotteita ensimmäistä kertaa myyntiin? Lue ohjeet
         <NuxtLink to="/ohjeet">tästä</NuxtLink> tai siirry suoraan
-        <NuxtLink to="/varaa">varaamaan pöytä</NuxtLink>.
+        <NuxtLink to="/varaus">varaamaan pöytä</NuxtLink>.
       </p>
     </section>
   </div>

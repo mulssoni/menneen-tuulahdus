@@ -2,11 +2,19 @@
   <div class="contact-form" name="yhteydenotto">
     <h2>Varaus</h2>
     <form
+      name="Varaus"
       style="width: 350px"
-      method="POST"
+      method="post"
       data-netlify="true"
+      data-netlify-honeypot="bot-field"
       @submit="submitForm"
     >
+      <input type="hidden" name="form-name" value="Varaus" />
+      <p style="display: none">
+        <label>
+          Don’t fill this out if you’re human: <input name="bot-field" />
+        </label>
+      </p>
       <input
         type="hidden"
         name="subject"
@@ -142,23 +150,31 @@ const submitForm = async (e: {
   e.preventDefault()
 
   const submitData = {
-    ...data,
+    ...data.value,
     startDate: format(new Date(data.value.startDate), 'dd.MM.yyyy'),
     endDate: format(new Date(data.value.endDate), 'dd.MM.yyyy'),
   }
 
-  const formData = new FormData()
-  const keys = Object.keys(submitData)
-
-  keys.forEach((key) => {
-    formData.append(key, submitData[key as keyof typeof submitData].toString())
-  })
-  formData.delete('fiftyFifty')
-
-  if (data.value.fiftyFifty) {
-    formData.delete('startDate')
-    formData.delete('endDate')
+  const encode = (data: any) => {
+    return Object.keys(data)
+      .map(
+        (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+      )
+      .join('&')
   }
+
+  // const formData = new FormData()
+  // const keys = Object.keys(submitData)
+
+  // // keys.forEach((key) => {
+  // //   formData.append(key, submitData[key as keyof typeof submitData].toString())
+  // // })
+  // // formData.delete('fiftyFifty')
+
+  // // if (data.value.fiftyFifty) {
+  // //   formData.delete('startDate')
+  // //   formData.delete('endDate')
+  // // }
 
   try {
     error.value = ''
@@ -168,7 +184,7 @@ const submitForm = async (e: {
     const res = await fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData as any).toString(),
+      body: encode({ 'form-name': 'Varaus', ...submitData }),
     })
     if (!res.ok) {
       throw new Error('Varauksen lähetys epäonnistui')

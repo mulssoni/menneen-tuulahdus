@@ -2,18 +2,16 @@
   <div class="contact-form" name="yhteydenotto">
     <h2>Varaus</h2>
     <form
-      name="Varaus"
       style="width: 350px"
       method="POST"
       data-netlify="true"
-      netlify-honeypot="bot-field"
       @submit="submitForm"
     >
-      <input type="hidden" name="form-name" value="Varaus" />
-      <p hidden>
-        <label>Don’t fill this out: <input name="bot-field" /></label>
-      </p>
-      <input type="hidden" name="subject" :value="`Varaus ${data.name}`" />
+      <input
+        type="hidden"
+        name="subject"
+        :value="`Yhteydenotto ${data.name}`"
+      />
       <div class="booking-form">
         <div class="input-container">
           <label for="name">Nimi</label>
@@ -144,7 +142,7 @@ const submitForm = async (e: {
   e.preventDefault()
 
   const submitData = {
-    ...data.value,
+    ...data,
     startDate: format(new Date(data.value.startDate), 'dd.MM.yyyy'),
     endDate: format(new Date(data.value.endDate), 'dd.MM.yyyy'),
   }

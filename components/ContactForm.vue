@@ -15,6 +15,7 @@
           Don’t fill this out if you’re human: <input name="bot-field" />
         </label>
       </p>
+      <input type="hidden" name="subject" value="Varaus" />
       <div class="booking-form">
         <div class="input-container">
           <label for="name">Nimi</label>
@@ -158,19 +159,6 @@ const submitForm = async (e: {
       .join('&')
   }
 
-  // const formData = new FormData()
-  // const keys = Object.keys(submitData)
-
-  // // keys.forEach((key) => {
-  // //   formData.append(key, submitData[key as keyof typeof submitData].toString())
-  // // })
-  // // formData.delete('fiftyFifty')
-
-  // // if (data.value.fiftyFifty) {
-  // //   formData.delete('startDate')
-  // //   formData.delete('endDate')
-  // // }
-
   try {
     error.value = ''
     isSubmitting.value = false
@@ -181,7 +169,6 @@ const submitForm = async (e: {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': 'Varaus',
-        subject: `Varaus - ${data.value.name}`,
         ...submitData,
       }),
     })

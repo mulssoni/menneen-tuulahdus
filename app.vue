@@ -11,6 +11,9 @@ useHead({
       ? `${page} | Kirpputori Jämsä - Menneen Tuulahdus',`
       : 'Kirpputori Jämsä - Menneen Tuulahdus'
   },
+  htmlAttrs: {
+    lang: 'fi',
+  },
   title: '',
   meta: [
     {

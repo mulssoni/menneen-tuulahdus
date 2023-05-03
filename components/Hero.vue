@@ -19,6 +19,8 @@
         <img
           src="~/assets/images/menneen-tuulahdus-hero.jpeg"
           alt="placeholder"
+          width="626"
+          height="704"
         />
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -11,7 +11,7 @@
       <span class="line"></span>
     </button>
     <div class="nav__container">
-      <ul class="nav__list" role="navigation">
+      <menu class="nav__list">
         <li
           v-for="item in navItems"
           :key="item.name"
@@ -20,7 +20,7 @@
         >
           <NuxtLink :to="item.path">{{ item.name }}</NuxtLink>
         </li>
-      </ul>
+      </menu>
     </div>
   </nav>
 </template>
@@ -99,11 +99,11 @@ const navItems = [
       transition: all 0.25s ease-out;
 
       &.router-link-exact-active {
-        color: var(--color-primary);
+        color: var(--color-primary-600);
       }
 
       &:hover {
-        color: var(--color-primary);
+        color: var(--color-primary-700);
       }
     }
   }

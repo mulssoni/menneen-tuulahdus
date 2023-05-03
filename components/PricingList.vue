@@ -1,7 +1,7 @@
 <template>
   <div class="pricing">
-    <h2>Hinnasto</h2>
-    <span>Kuusi vuorokautta</span>
+    <h2 class="text-center">Hinnasto</h2>
+    <span class="text-center">Kuusi vuorokautta</span>
     <div style="display: flex; flex-direction: column; row-gap: 1.5rem">
       <ul class="price-list">
         <li v-for="item in items" :key="item.name" class="price-list__item">
@@ -11,7 +11,7 @@
         </li>
       </ul>
       <div>
-        <h2>Sisältää</h2>
+        <h2 class="text-center">Sisältää</h2>
         <ul class="includes-list">
           <li v-for="item in includes" :key="item" class="includes-list__item">
             {{ item }}
@@ -97,7 +97,6 @@ ul {
     align-items: center;
     padding: 0.5rem 0;
     column-gap: 1.5rem;
-    min-width: 375px;
 
     & > span {
       &:nth-child(3) {

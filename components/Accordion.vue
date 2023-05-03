@@ -72,7 +72,7 @@ const toggleAccordion = () => {
 
     &.open {
       grid-template-rows: 1fr;
-      padding: 3rem 2.5rem;
+      padding: calc(3rem + 18px) 2.5rem;
     }
 
     .inner {

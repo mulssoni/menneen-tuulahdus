@@ -4,14 +4,8 @@
       <span class="title">{{ props.title }}</span>
       <span class="indicator">{{ isOpen ? '–' : '+' }}</span>
     </div>
-    <div
-      ref="content"
-      :class="`accordion__content ${isOpen ? 'open' : ''}`"
-      :style="`height: ${isOpen ? openHeight : '0px'}; ${
-        isOpen ? 'display: flex; align-items: center' : ''
-      }`"
-    >
-      <div>
+    <div :class="`accordion__content ${isOpen ? 'open' : ''}`">
+      <div class="inner">
         <slot />
       </div>
     </div>
@@ -26,14 +20,6 @@ const props = withDefaults(defineProps<PropsInterface>(), {
   title: '',
 })
 
-const content = ref<any>(null)
-const openHeight = ref('0px')
-
-onMounted(() => {
-  if (content.value) {
-    openHeight.value = `${content.value.scrollHeight + 18 + 112}px`
-  }
-})
 const isOpen = ref(false)
 
 const toggleAccordion = () => {
@@ -75,11 +61,23 @@ const toggleAccordion = () => {
     border-top: none;
     border-radius: 0 0 18px 18px;
     height: 0;
-    overflow: hidden;
     transition: all 0.25s ease-out;
     position: relative;
     top: -18px;
     background-color: rgba(0, 0, 0, 0.03);
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    height: auto;
+
+    &.open {
+      grid-template-rows: 1fr;
+      padding: 3rem 2.5rem;
+    }
+
+    .inner {
+      overflow: hidden;
+    }
   }
 }
 </style>

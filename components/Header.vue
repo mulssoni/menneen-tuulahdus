@@ -6,7 +6,12 @@
     </div>
     <div class="header__logo">
       <NuxtLink to="/">
-        <img src="~/assets/images/menneen-tuulahdus-logo.svg" alt="logo" />
+        <img
+          src="~/assets/images/menneen-tuulahdus-logo.svg"
+          alt="logo"
+          width="80"
+          height="36"
+        />
       </NuxtLink>
     </div>
     <div class="header__menu">

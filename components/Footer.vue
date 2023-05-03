@@ -1,7 +1,12 @@
 <template>
   <footer class="footer">
     <div class="footer__barcode">
-      <img src="~/assets/images/barcode.svg" alt="barcode" />
+      <img
+        src="~/assets/images/barcode.svg"
+        alt="barcode"
+        width="300"
+        height="53"
+      />
       <ul>
         <li>Teollisuuskatu 7, Jämsä</li>
         <li>
@@ -23,10 +28,20 @@
         href="https://www.facebook.com/profile.php?id=100068307363115"
         target="_blank"
       >
-        <img src="/icons/square-facebook.svg" alt="facebook" />
+        <img
+          src="/icons/square-facebook.svg"
+          alt="facebook"
+          width="30"
+          height="30"
+        />
       </a>
       <a href="https://www.instagram.com/menneentuulahdus/" target="_blank">
-        <img src="/icons/square-instagram.svg" alt="instagram" />
+        <img
+          src="/icons/square-instagram.svg"
+          alt="instagram"
+          width="30"
+          height="30"
+        />
       </a>
     </div>
   </footer>

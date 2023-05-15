@@ -36,6 +36,7 @@
   background-repeat: no-repeat;
   @include breakpoint-down(md) {
     --content-padding: 0;
+    padding: 0;
     height: calc(100vh - var(--header-height));
     margin-left: calc(var(--container-padding) * -0.5);
     margin-right: calc(var(--container-padding) * -0.5);

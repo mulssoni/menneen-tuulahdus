@@ -26,7 +26,7 @@
   align-items: center;
   height: var(--header-height);
   @include breakpoint-down(md) {
-    --header-height: calc(30px + 2rem);
+    --header-height: calc(60px + 2rem);
   }
 
   & > * {

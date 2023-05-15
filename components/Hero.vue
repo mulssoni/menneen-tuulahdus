@@ -1,6 +1,6 @@
 <template>
   <div class="hero">
-    <div class="hero__container">
+    <div class="hero__container container">
       <div class="hero__content">
         <h1 class="hero__title">Menneen Tuulahdus</h1>
         <div class="hero__text">
@@ -22,23 +22,14 @@
           width="626"
           height="704"
         />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
-          style="position: absolute; bottom: 0; left: 0; right: 0"
-        >
-          <path
-            fill="var(--color-primary)"
-            fill-opacity="1"
-            d="M0,224L80,202.7C160,181,320,139,480,149.3C640,160,800,224,960,245.3C1120,267,1280,245,1360,234.7L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-          ></path>
-        </svg>
       </div>
     </div>
   </div>
 </template>
 <style lang="scss" scoped>
 .hero {
+  background-color: rgba(0, 0, 0, 0.02);
+  padding: 4rem 0;
   --content-padding: 4rem 0;
   background-size: cover;
   background-position: center;

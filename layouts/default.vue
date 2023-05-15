@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper container">
+  <div class="wrapper">
     <Header />
     <main class="main-wrapper">
       <slot />

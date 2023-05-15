@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header container">
     <div class="header__address">
       <span>Teollisuuskatu 7, Jämsä</span>
       <span class="line"></span>

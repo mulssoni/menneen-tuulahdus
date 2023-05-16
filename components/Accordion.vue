@@ -57,7 +57,7 @@ const toggleAccordion = () => {
 
   &__content {
     padding: 0 2.5rem;
-    border: 1px solid var(--color-primary);
+    border: 1px solid #000;
     border-top: none;
     border-radius: 0 0 18px 18px;
     height: 0;

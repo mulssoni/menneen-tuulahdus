@@ -2,12 +2,7 @@
   <div>
     <Hero style="margin-bottom: 5rem" />
     <div class="container">
-      <section
-        style="
-          border-top: 1px solid rgba(0, 0, 0, 0.1);
-          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        "
-      >
+      <section>
         <h2>Myyntiin</h2>
         <p>
           Oletko tuomassa tuotteita ensimmäistä kertaa myyntiin? Lue ohjeet

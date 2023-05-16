@@ -98,8 +98,7 @@
   &__text {
     font-size: 1.25rem;
     margin-bottom: 2rem;
-    font-weight: 400;
-    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
     line-height: 1.85;
     &.blur {
       @include breakpoint-up(md) {

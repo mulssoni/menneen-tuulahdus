@@ -48,7 +48,7 @@ ul {
 }
 .booking {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 100%;
   gap: 0 5rem;
   flex-wrap: wrap;

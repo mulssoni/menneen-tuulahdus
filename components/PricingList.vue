@@ -124,7 +124,8 @@ ul {
     min-width: auto;
     border-radius: 18px;
     padding: 0.85rem 1.25rem;
-    border: 1px solid var(--color-primary);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #ebe9df;
   }
 }
 

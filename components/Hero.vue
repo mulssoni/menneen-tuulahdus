@@ -28,7 +28,7 @@
 </template>
 <style lang="scss" scoped>
 .hero {
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: #ebe9df;
   padding: 4rem 0;
   --content-padding: 4rem 0;
   background-size: cover;

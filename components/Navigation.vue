@@ -25,6 +25,8 @@
   </nav>
 </template>
 <script setup lang="ts">
+import { navItems } from '@/utils/constants'
+
 const isOpen = ref(false)
 const toggleNav = () => {
   isOpen.value = !isOpen.value
@@ -32,24 +34,6 @@ const toggleNav = () => {
 const closeNav = () => {
   isOpen.value = false
 }
-const navItems = [
-  {
-    name: 'Etusivu',
-    path: '/',
-  },
-  {
-    name: 'Varaus',
-    path: '/varaus',
-  },
-  {
-    name: 'Ohjeet',
-    path: '/ohjeet',
-  },
-  {
-    name: 'Yhteystiedot',
-    path: '/yhteystiedot',
-  },
-]
 </script>
 
 <style lang="scss" scoped>

@@ -51,11 +51,4 @@ useHead({
     },
   ],
 })
-
-// <!-- Primary Meta Tags -->
-// <title>Kirpputori Jämsä - Menneen tuulahdus</title>
-// <meta name="title" content="Kirpputori Jämsä - Menneen tuulahdus">
-// <meta name="description" content="Tule kirpputorille Jämsään – myymään ja tekemään loistavia löytöjä. Saatavilla myös prosenttimyynti 50/50 -palvelulla. Lämpimästi tervetuloa!">
-
-// <!-- Open Graph / Facebook -->
 </script>

@@ -1,13 +1,20 @@
 <template>
   <footer class="footer">
     <div class="container">
-      <div class="footer__barcode">
+      <div class="footer__info">
         <img
           src="~/assets/images/barcode.svg"
           alt="barcode"
           width="300"
           height="53"
         />
+        <p style="margin: 0">
+          Kirpputorin valikoima on monipuolinen ja vaihtelee päivittäin, joten
+          jokainen vierailu tuo mukanaan uusia yllätyksiä.
+        </p>
+      </div>
+      <div class="footer__barcode">
+        <h3>Yhteystiedot</h3>
         <ul>
           <li>Teollisuuskatu 7, Jämsä</li>
           <li>
@@ -26,6 +33,17 @@
           <li><span>Su</span> <span>suljettu</span></li>
         </ul>
       </div>
+      <nav class="footer-nav">
+        <menu class="footer-nav__list">
+          <li
+            v-for="item in navItems"
+            :key="item.name"
+            class="footer-nav__item"
+          >
+            <NuxtLink :to="item.path">{{ item.name }}</NuxtLink>
+          </li>
+        </menu>
+      </nav>
       <div class="footer__socials">
         <a
           href="https://www.facebook.com/profile.php?id=100068307363115"
@@ -52,6 +70,34 @@
 </template>
 
 <style lang="scss">
+.footer-nav {
+  grid-column: 1 / -1;
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    @include breakpoint-down(md) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -60,18 +106,20 @@ ul {
 .footer {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   margin-top: 8rem;
-  padding: 5rem 0rem;
+  padding: 5rem 0rem 3rem;
 
   & > .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem 3rem;
+
+    /* & > * {
+      flex: 1;
+    } */
 
     @include breakpoint-down(md) {
-      flex-direction: column;
-      align-items: center;
+      grid-template-columns: minmax(300px, 400px);
+      justify-content: center;
       gap: 3rem;
     }
   }
@@ -79,7 +127,10 @@ ul {
   &__barcode {
     display: flex;
     flex-direction: column;
-    row-gap: 0.5rem;
+    @include breakpoint-up(md) {
+      align-items: center;
+      text-align: center;
+    }
     img {
       width: 300px;
       height: auto;
@@ -93,7 +144,6 @@ ul {
   }
 
   &__hours {
-    min-width: 300px;
     h3 {
       margin-top: 0;
       text-align: left;
@@ -108,8 +158,9 @@ ul {
   }
 
   &__socials {
+    grid-column: 1 / -1;
     display: flex;
-    align-items: flex-start;
+    justify-content: center;
     gap: 1rem;
 
     img {

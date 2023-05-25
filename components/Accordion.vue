@@ -38,7 +38,6 @@ const toggleAccordion = () => {
     background-color: #000;
     border-radius: 18px;
     font-weight: 600;
-    border: 1px solid var(--color-primary-600);
     position: relative;
     display: flex;
     justify-content: space-between;

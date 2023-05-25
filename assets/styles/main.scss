@@ -111,3 +111,29 @@ h1.title {
     }
   }
 }
+
+.img-text {
+  display: grid;
+  grid-template-columns: 1.25fr 2fr;
+  @include breakpoint-down(md) {
+    grid-template-columns: 1fr;
+  }
+  gap: 0 5rem;
+
+  &__img {
+    min-height: 100%;
+    min-width: 100%;
+    border-radius: 18px;
+    object-fit: cover;
+    @include breakpoint-down(md) {
+      aspect-ratio: 21/9;
+    }
+  }
+
+  &__text {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}

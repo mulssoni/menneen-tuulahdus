@@ -128,6 +128,9 @@ h1.title {
     @include breakpoint-down(md) {
       aspect-ratio: 21/9;
     }
+    @include breakpoint-down(sm) {
+      aspect-ratio: 5/4;
+    }
   }
 
   &__text {

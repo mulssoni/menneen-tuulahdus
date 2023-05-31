@@ -1,7 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   css: ['@/assets/styles/main.scss'],
-  modules: ['nuxt-simple-sitemap'],
   vite: {
     css: {
       preprocessorOptions: {
@@ -11,8 +10,5 @@ export default defineNuxtConfig({
         },
       },
     },
-  },
-  sitemap: {
-    siteUrl: 'https://menneentuulahdus.fi',
   },
 })

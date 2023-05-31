@@ -36,6 +36,7 @@ const toggleAccordion = () => {
     padding: 1rem calc(50px + 1rem) 1rem 2.5rem;
     font-size: 1.1rem;
     background-color: #000;
+
     border-radius: 18px;
     font-weight: 600;
     position: relative;
@@ -56,14 +57,14 @@ const toggleAccordion = () => {
 
   &__content {
     padding: 0 2.5rem;
-    border: 1px solid #000;
+    border: 1px solid var(--color-primary);
     border-top: none;
     border-radius: 0 0 18px 18px;
     height: 0;
     transition: all 0.25s ease-out;
     position: relative;
     top: -18px;
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: var(--color-primary-50);
     display: grid;
     grid-template-rows: 0fr;
     overflow: hidden;

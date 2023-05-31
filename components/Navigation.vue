@@ -34,6 +34,16 @@ const toggleNav = () => {
 const closeNav = () => {
   isOpen.value = false
 }
+
+watch(isOpen, () => {
+  if (isOpen.value) {
+    document.body.style.overflow = 'hidden'
+    document.body.style.maxHeight = '100dvh'
+  } else {
+    document.body.style.overflow = ''
+    document.body.style.maxHeight = ''
+  }
+})
 </script>
 
 <style lang="scss" scoped>
@@ -55,7 +65,7 @@ const closeNav = () => {
     transition: all 0.25s ease-out;
     width: 30px;
     height: var(--size);
-    background-color: var(--color-primary);
+    background-color: var(--color-accent);
     display: block;
   }
 }
@@ -83,11 +93,11 @@ const closeNav = () => {
       transition: all 0.25s ease-out;
 
       &.router-link-exact-active {
-        color: var(--color-primary-600);
+        color: var(--color-accent-600);
       }
 
       &:hover {
-        color: var(--color-primary-700);
+        color: var(--color-accent-700);
       }
     }
   }

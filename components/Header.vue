@@ -47,12 +47,14 @@
   &__logo {
     display: flex;
     justify-content: center;
+    z-index: 20;
     @include breakpoint-down(sm) {
       justify-content: flex-start;
     }
     img {
-      width: 80px;
-      height: auto;
+      width: auto;
+      max-width: 70px;
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;

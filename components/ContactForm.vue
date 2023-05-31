@@ -96,10 +96,17 @@
               name="end-date"
               required
             />
+            <span
+              class="notification"
+              style="font-size: 0.85rem; padding: 1.5em 2em"
+            >
+              Valitsemasi varausajankohta on <b>alustava</b>. Vahvistamme teille
+              pöydän saatavuuden sähköpostitse tai puhelimitse.
+            </span>
           </div>
         </div>
         <button
-          :class="isSuccess ? 'button--success' : 'button--primary'"
+          :class="isSuccess ? 'button--success' : 'button--accent'"
           type="submit"
         >
           {{
@@ -239,13 +246,13 @@ const submitForm = async (e: {
     input[type='checkbox'] {
       width: 1.5rem;
       height: 1.5rem;
-      border: 1px solid var(--color-primary);
+      border: 1px solid var(--color-accent);
       border-radius: 8px;
       background-color: #fff;
       transition: border-color 0.25s ease-out;
 
       &:checked {
-        background-color: var(--color-primary);
+        background-color: var(--color-accent);
       }
     }
   }

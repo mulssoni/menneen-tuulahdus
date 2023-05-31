@@ -31,6 +31,7 @@
           <li><span>Ma–Pe</span> <span>klo 10.00 – 17.00</span></li>
           <li><span>La</span> <span>klo 10.00 – 14.00</span></li>
           <li><span>Su</span> <span>suljettu</span></li>
+          <li><span>Pyhäpäivät</span> <span>suljettu</span></li>
         </ul>
       </div>
       <nav class="footer-nav">

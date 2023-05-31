@@ -12,6 +12,10 @@
   text-decoration: none;
   font-size: 0.85rem;
   text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
   &--primary {
     @extend .button;
@@ -26,16 +30,16 @@
     }
   }
 
-  &--secondary {
+  &--accent {
     @extend .button;
-    background-color: var(--color-secondary);
+    background-color: var(--color-accent);
     color: var(--color-text);
-    border-bottom: 5px solid var(--color-secondary-600);
+    border-bottom: 5px solid var(--color-accent-600);
 
     &:hover {
-      background-color: var(--color-secondary-600);
+      background-color: var(--color-accent-600);
       color: var(--color-text);
-      border-color: var(--color-secondary-700);
+      border-color: var(--color-accent-700);
     }
   }
 

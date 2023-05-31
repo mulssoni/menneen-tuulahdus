@@ -2,19 +2,20 @@
   // COLORS
   --color-text: #000;
 
-  --color-primary: #ffafcc;
-  --color-primary-500: #ffafcc;
-  --color-primary-600: #c7899f;
-  --color-primary-700: #916575;
-  --color-primary-800: #5f444d;
-  --color-primary-900: #312429;
+  --color-primary-50: #f8f7f4;
+  --color-primary: #ebe9df;
+  --color-primary-500: #ebe9df;
+  --color-primary-600: #b7b6ae;
+  --color-primary-700: #86857f;
+  --color-primary-800: #585754;
+  --color-primary-900: #2d2d2b;
 
-  --color-secondary: #ffafcc;
-  --color-secondary-500: #ffafcc;
-  --color-secondary-600: #c7899f;
-  --color-secondary-700: #916575;
-  --color-secondary-800: #5f444d;
-  --color-secondary-900: #312429;
+  --color-accent: #ffafcc;
+  --color-accent-500: #ffafcc;
+  --color-accent-600: #c7899f;
+  --color-accent-700: #916575;
+  --color-accent-800: #5f444d;
+  --color-accent-900: #312429;
 
   --color-brown: #4b3329;
 
@@ -22,6 +23,6 @@
   --font-family: 'Roboto Slab', serif;
 
   // LAYOUT
-  --header-height: calc(70px + 2rem);
+  --header-height: calc(60px + 2rem);
   --container-padding: 24px;
 }

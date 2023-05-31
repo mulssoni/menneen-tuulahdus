@@ -10,14 +10,12 @@
           </p>
         </div>
         <div class="hero__buttons">
-          <NuxtLink to="/varaus" class="button--secondary">
-            Varaa pöytä
-          </NuxtLink>
+          <NuxtLink to="/varaus" class="button--accent"> Varaa pöytä </NuxtLink>
         </div>
       </div>
       <div class="hero__image">
         <img
-          src="~/assets/images/menneen-tuulahdus-hero.jpeg"
+          src="~/assets/images/kassa_edesta_2.webp"
           alt="placeholder"
           width="626"
           height="704"
@@ -28,7 +26,7 @@
 </template>
 <style lang="scss" scoped>
 .hero {
-  background-color: #ebe9df;
+  background-color: var(--color-primary);
   padding: 4rem 0;
   --content-padding: 4rem 0;
   background-size: cover;

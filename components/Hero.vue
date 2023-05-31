@@ -16,14 +16,11 @@
         </div>
       </div>
       <div class="hero__image">
-        <nuxt-img
-          src="/menneen-tuulahdus-hero.jpeg"
+        <img
+          src="~/assets/images/menneen-tuulahdus-hero.jpeg"
           alt="placeholder"
           width="626"
           height="704"
-          quality="80"
-          format="webp"
-          fit="cover"
         />
       </div>
     </div>

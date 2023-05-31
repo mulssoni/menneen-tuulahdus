@@ -6,8 +6,8 @@
     </div>
     <div class="header__logo">
       <NuxtLink to="/">
-        <nuxt-img
-          src="/menneen-tuulahdus-logo.svg"
+        <img
+          src="~/assets/images/menneen-tuulahdus-logo.svg"
           alt="logo"
           width="80"
           height="36"

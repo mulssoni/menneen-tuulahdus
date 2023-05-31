@@ -12,12 +12,9 @@
       </section>
       <section>
         <div class="img-text">
-          <nuxt-img
+          <img
             src="https://images.pexels.com/photos/6069531/pexels-photo-6069531.jpeg?cs=srgb&dl=pexels-cottonbro-studio-6069531.jpg&fm=jpg&w=1280&h=853&_gl=1*5s62bz*_ga*Njg5NjczNjMuMTY4MDg2ODc1OQ..*_ga_8JE65Q40S6*MTY4NDk5ODUwMS4xMi4xLjE2ODQ5OTg1NDAuMC4wLjA."
             class="img-text__img"
-            quality="80"
-            format="webp"
-            width="400"
           />
           <div class="img-text__text">
             <h2 style="font-size: 2.5rem">Kestäviä valintoja</h2>

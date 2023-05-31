@@ -2,7 +2,12 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__info">
-        <nuxt-img src="/barcode.svg" alt="barcode" width="300" height="53" />
+        <img
+          src="~/assets/images/barcode.svg"
+          alt="barcode"
+          width="300"
+          height="53"
+        />
         <p style="margin: 0">
           Kirpputorin valikoima on monipuolinen ja vaihtelee päivittäin, joten
           jokainen vierailu tuo mukanaan uusia yllätyksiä.
@@ -44,7 +49,7 @@
           href="https://www.facebook.com/profile.php?id=100068307363115"
           target="_blank"
         >
-          <nuxt-img
+          <img
             src="/icons/square-facebook.svg"
             alt="facebook"
             width="30"
@@ -52,7 +57,7 @@
           />
         </a>
         <a href="https://www.instagram.com/menneentuulahdus/" target="_blank">
-          <nuxt-img
+          <img
             src="/icons/square-instagram.svg"
             alt="instagram"
             width="30"

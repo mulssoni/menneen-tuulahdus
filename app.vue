@@ -31,7 +31,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: 'https://menneentuulahdus.fi/og-image.png',
+      content: 'https://menneentuulahdus.fi/og-image-min.png',
     },
 
     { property: 'twitter:card', content: 'summary_large_image' },
@@ -47,7 +47,7 @@ useHead({
     },
     {
       property: 'twitter:image',
-      content: 'https://menneentuulahdus.fi/og-image.png',
+      content: 'https://menneentuulahdus.fi/og-image-min.png',
     },
   ],
 })

@@ -67,11 +67,13 @@
           <label for="fifty-fifty"
             >50/50 palvelu
             <NuxtLink to="#fifty-fifty-service">
-              <img
+              <nuxt-img
                 src="/icons/circle-question.svg"
                 alt="Kysymysmerkki"
                 class="icon"
                 style="margin-left: 0.5rem"
+                width="20"
+                height="20"
               />
             </NuxtLink>
           </label>

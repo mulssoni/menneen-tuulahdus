@@ -5,7 +5,9 @@
     <div style="display: flex; flex-direction: column; row-gap: 1.5rem">
       <ul class="price-list">
         <li v-for="item in items" :key="item.name" class="price-list__item">
-          <span><img :src="`/icons/${item.icon}.svg`" :alt="item.name" /></span>
+          <span>
+            <nuxt-img :src="`/icons/${item.icon}.svg`" :alt="item.name" />
+          </span>
           <span>{{ item.name }}</span>
           <span>{{ item.price }}</span>
         </li>

@@ -30,10 +30,20 @@
             href="https://www.facebook.com/profile.php?id=100068307363115"
             target="_blank"
           >
-            <img src="/icons/square-facebook.svg" alt="facebook" />
+            <nuxt-img
+              src="/icons/square-facebook.svg"
+              alt="facebook"
+              height="30"
+              width="30"
+            />
           </a>
           <a href="https://www.instagram.com/menneentuulahdus/" target="_blank">
-            <img src="/icons/square-instagram.svg" alt="instagram" />
+            <nuxt-img
+              src="/icons/square-instagram.svg"
+              alt="instagram"
+              height="30"
+              width="30"
+            />
           </a>
         </div>
       </div>

@@ -41,7 +41,7 @@
             gap: 2rem 3rem;
           "
         >
-          <div>
+          <div class="fifty-block">
             <h2 style="font-size: 1.5rem; margin-bottom: 0.1em">
               Tutustu 50/50 -palveluumme!
             </h2>
@@ -71,3 +71,10 @@
     </div>
   </div>
 </template>
+<style lang="scss" scoped>
+.fifty-block {
+  @include breakpoint-down(md) {
+    text-align: center;
+  }
+}
+</style>

@@ -33,7 +33,7 @@ const toggleAccordion = () => {
 
   &__header {
     cursor: pointer;
-    padding: 1rem calc(50px + 1rem) 1rem 2.5rem;
+    padding: 1rem calc(50px + 1rem) 1rem 1.5rem;
     font-size: 1.1rem;
     background-color: #000;
 
@@ -57,6 +57,10 @@ const toggleAccordion = () => {
 
   &__content {
     padding: 0 2.5rem;
+    @include breakpoint-down(md) {
+      padding: 0 1.5rem;
+    }
+    padding: 0 2.5rem;
     border: 1px solid var(--color-primary);
     border-top: none;
     border-radius: 0 0 18px 18px;
@@ -72,7 +76,10 @@ const toggleAccordion = () => {
 
     &.open {
       grid-template-rows: 1fr;
-      padding: calc(3rem + 18px) 2.5rem;
+      padding: calc(2rem + 18px) 2.5rem;
+      @include breakpoint-down(md) {
+        padding: calc(2rem + 18px) 1.5rem;
+      }
     }
 
     .inner {

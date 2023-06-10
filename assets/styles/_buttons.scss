@@ -1,8 +1,8 @@
 .button {
   border-radius: 18px;
   padding: 1rem 1.5rem;
-  font-weight: 700;
-  font-family: var(--font-family);
+  font-family: var(--font-family-heading);
+  font-weight: 900;
   outline: none;
   border: none;
   transition: all 0.25s ease-out;
@@ -33,12 +33,12 @@
   &--accent {
     @extend .button;
     background-color: var(--color-accent);
-    color: var(--color-text);
+    color: var(--color-accent-900);
     border-bottom: 5px solid var(--color-accent-600);
 
     &:hover {
       background-color: var(--color-accent-600);
-      color: var(--color-text);
+      color: #fff;
       border-color: var(--color-accent-700);
     }
   }
@@ -46,7 +46,7 @@
   &--success {
     @extend .button;
     background-color: #b4dbbd;
-    color: var(--color-text);
+    color: #000;
     border-bottom: 5px solid #85a28c;
   }
 

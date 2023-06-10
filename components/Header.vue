@@ -34,6 +34,7 @@
   }
 
   &__address {
+    font-family: var(--font-family-heading);
     display: none;
     @include breakpoint-up(sm) {
       display: flex;

@@ -2,15 +2,19 @@
   <div class="hero">
     <div class="hero__container container">
       <div class="hero__content">
-        <h1 class="hero__title">Menneen Tuulahdus</h1>
+        <div>
+          <h1 class="hero__title">Menneen Tuulahdus</h1>
+          <div class="hero__lead">Tervetuloa tekemään löytöjä</div>
+        </div>
         <div class="hero__text">
           <p>
-            Tervetuloa kirpputorille Jämsään, jossa on tilaa ja valoa.<br />
-            Meillä sinut otetaan ilolla vastaan!
+            Kirpputorimme on tunnelmallinen ja viihtyisä paikka, jossa voi
+            viettää mukavia hetkiä etsiessään aarteita tai myymässä omia
+            tarpeettomia tavaroitaan.
           </p>
         </div>
         <div class="hero__buttons">
-          <NuxtLink to="/varaus" class="button--accent"> Varaa pöytä </NuxtLink>
+          <NuxtLink to="/varaus" class="button--accent">Varaa pöytä</NuxtLink>
         </div>
       </div>
       <div class="hero__image">
@@ -59,6 +63,7 @@
   }
 
   &__content {
+    line-height: 1.25;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -72,6 +77,7 @@
       text-align: center;
       justify-content: space-between;
       color: #fff;
+      padding: 20% 1rem;
 
       h1 {
         font-size: min(15vmin, 5.5rem);
@@ -84,20 +90,48 @@
     letter-spacing: 2px;
     margin: 0;
     font-weight: 700;
-    margin-bottom: 2rem;
+    line-height: 1.1;
 
-    @include breakpoint-up(md) {
-    }
     @include breakpoint-down(md) {
-      flex: 1;
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+      color: #fff;
     }
   }
 
+  &__lead {
+    display: none;
+    align-items: center;
+    padding: 1.25rem 0.5rem;
+    font-weight: 400;
+    font-size: 0.85rem;
+    opacity: 0.85;
+
+    @include breakpoint-down(md) {
+      display: flex;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background-color: #fff;
+      margin-left: 12px;
+    }
+    &::before {
+      margin-left: 0;
+      margin-right: 12px;
+    }
+  }
   &__text {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     margin-bottom: 2rem;
-    font-weight: 300;
-    line-height: 1.85;
+    font-weight: 400;
+    line-height: 1.25;
+
+    @include breakpoint-down(md) {
+      display: none;
+    }
     &.blur {
       @include breakpoint-up(md) {
         padding: 2rem 1.5rem;
@@ -130,7 +164,14 @@
         right: 0;
         bottom: 0;
         content: '';
-        background-color: rgba(0, 0, 0, 0.15);
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(1px);
+        /* background: linear-gradient(
+          0deg,
+          var(--color-primary) 0%,
+          rgba(235, 233, 223, 0.8) 100%
+        ); */
+        /* backdrop-filter: contrast(200%); */
       }
     }
 
@@ -145,7 +186,6 @@
   }
 
   &__buttons {
-    margin: 1.5rem 0 0;
     z-index: 1;
   }
 }

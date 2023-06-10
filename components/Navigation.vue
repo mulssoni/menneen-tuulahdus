@@ -70,6 +70,8 @@ watch(isOpen, () => {
   }
 }
 .nav {
+  font-family: var(--font-family-heading);
+
   &__list {
     display: none;
     list-style: none;

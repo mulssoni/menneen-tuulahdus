@@ -1,6 +1,6 @@
 :root {
   // COLORS
-  --color-text: #000;
+  --color-text: #333;
 
   --color-primary-50: #f8f7f4;
   --color-primary: #ebe9df;
@@ -20,7 +20,9 @@
   --color-brown: #4b3329;
 
   // FONTS
-  --font-family: 'Roboto Slab', serif;
+  // --font-family: 'Roboto Slab', serif;
+  --font-family: 'Roboto Flex', sans-serif;
+  --font-family-heading: 'Roboto Slab', serif;
 
   // LAYOUT
   --header-height: calc(60px + 2rem);

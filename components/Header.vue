@@ -40,7 +40,6 @@
       display: flex;
       align-items: center;
       column-gap: 1rem;
-      font-family: var(--font-family-accent);
       font-size: 0.85rem;
     }
   }

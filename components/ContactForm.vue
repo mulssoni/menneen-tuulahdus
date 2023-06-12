@@ -154,9 +154,13 @@ const submitForm = async (e: {
 
   const submitData = {
     ...data.value,
-    fiftyFifty: data.value.fiftyFifty ? 'Kyllä' : 'Ei',
-    startDate: format(new Date(data.value.startDate), 'dd.MM.yyyy'),
-    endDate: format(new Date(data.value.endDate), 'dd.MM.yyyy'),
+    'fifty-fifty': data.value.fiftyFifty ? 'Kyllä' : 'Ei',
+    'start-date': !data.value.fiftyFifty
+      ? format(new Date(data.value.startDate), 'dd.MM.yyyy')
+      : '',
+    'end-date': !data.value.fiftyFifty
+      ? format(new Date(data.value.endDate), 'dd.MM.yyyy')
+      : '',
   }
 
   const encode = (data: any) => {

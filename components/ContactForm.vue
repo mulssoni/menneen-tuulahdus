@@ -58,13 +58,8 @@
           />
         </div>
         <div class="input-container checkbox">
-          <input
-            id="fifty-fifty"
-            v-model="data.fiftyFifty"
-            type="checkbox"
-            name="fifty-fifty"
-          />
-          <label for="fifty-fifty"
+          <input id="fifty" v-model="data.fifty" type="checkbox" name="fifty" />
+          <label for="fifty"
             >50/50 palvelu
             <NuxtLink to="#fifty-fifty-service">
               <img
@@ -77,23 +72,23 @@
           </label>
         </div>
         <div class="dates">
-          <div v-if="!data.fiftyFifty" class="input-container">
-            <label for="start-date">Alkamispäivä</label>
+          <div v-if="!data.fifty" class="input-container">
+            <label for="startdate">Alkamispäivä</label>
             <input
-              id="start-date"
-              v-model="data.startDate"
+              id="startdate"
+              v-model="data.startdate"
               type="date"
-              name="start-date"
+              name="startdate"
               required
             />
           </div>
-          <div v-if="!data.fiftyFifty" class="input-container">
-            <label for="end-date">Loppumispäivä</label>
+          <div v-if="!data.fifty" class="input-container">
+            <label for="enddate">Loppumispäivä</label>
             <input
-              id="end-date"
-              v-model="data.endDate"
+              id="enddate"
+              v-model="data.enddate"
               type="date"
-              name="end-date"
+              name="enddate"
               required
             />
             <span
@@ -135,9 +130,9 @@ const initData = {
   email: '',
   phone: '',
   city: '',
-  fiftyFifty: false,
-  startDate: toISODate(TODAY),
-  endDate: toISODate(SIX_DAYS_FROM_TODAY),
+  fifty: false,
+  startdate: toISODate(TODAY),
+  enddate: toISODate(SIX_DAYS_FROM_TODAY),
 }
 const data = ref({ ...initData })
 
@@ -154,12 +149,12 @@ const submitForm = async (e: {
 
   const submitData = {
     ...data.value,
-    'fifty-fifty': data.value.fiftyFifty ? 'Kyllä' : 'Ei',
-    'start-date': !data.value.fiftyFifty
-      ? format(new Date(data.value.startDate), 'dd.MM.yyyy')
+    fifty: data.value.fifty ? 'Kyllä' : 'Ei',
+    startdate: !data.value.fifty
+      ? format(new Date(data.value.startdate), 'dd.MM.yyyy')
       : '',
-    'end-date': !data.value.fiftyFifty
-      ? format(new Date(data.value.endDate), 'dd.MM.yyyy')
+    enddate: !data.value.fifty
+      ? format(new Date(data.value.enddate), 'dd.MM.yyyy')
       : '',
   }
 

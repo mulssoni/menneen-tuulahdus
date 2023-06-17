@@ -149,6 +149,7 @@ const submitForm = async (e: {
 
   const submitData = {
     ...data.value,
+    subject: `Varaus - ${data.value.name}`,
     fifty: data.value.fifty ? 'Kyllä' : 'Ei',
     startdate: !data.value.fifty
       ? format(new Date(data.value.startdate), 'dd.MM.yyyy')

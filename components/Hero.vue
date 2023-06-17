@@ -93,7 +93,7 @@
     line-height: 1.1;
 
     @include breakpoint-down(md) {
-      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
       color: #fff;
     }
   }
@@ -164,7 +164,7 @@
         right: 0;
         bottom: 0;
         content: '';
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.2);
         backdrop-filter: blur(1px);
         /* background: linear-gradient(
           0deg,

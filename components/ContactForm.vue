@@ -9,7 +9,12 @@
       data-netlify-honeypot="bot-field"
       @submit="submitForm"
     >
-      <input type="hidden" name="form-name" value="Varaus" data-remove-prefix />
+      <input
+        type="hidden"
+        name="form-name"
+        value="Varaus"
+        data-remove-prefix="true"
+      />
       <p style="display: none">
         <label>
           Don’t fill this out if you’re human: <input name="bot-field" />

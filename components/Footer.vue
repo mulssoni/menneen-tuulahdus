@@ -18,9 +18,9 @@
         <ul>
           <li>Teollisuuskatu 7, Jämsä</li>
           <li>
-            <a href="mailto:info@menneentuulahdus.fi"
-              >info@menneentuulahdus.fi</a
-            >
+            <a href="mailto:menneentuulahdus@outlook.com">
+              menneentuulahdus@outlook.com
+            </a>
           </li>
           <li><a href="tel:+358 40 704 4697">+358 40 704 4697</a></li>
         </ul>

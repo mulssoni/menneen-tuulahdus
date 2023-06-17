@@ -12,7 +12,13 @@
       </section>
       <article>
         <div class="img-text">
-          <img src="~/assets/images/kalusteet.webp" class="img-text__img" />
+          <img
+            src="~/assets/images/kalusteet.webp"
+            class="img-text__img"
+            width="500"
+            height="685"
+            alt="Kalusteet"
+          />
           <div class="img-text__text">
             <h2 style="font-size: 2.5rem">Kestäviä valintoja</h2>
             <p>
@@ -54,7 +60,13 @@
       </section>
       <section>
         <div class="img-text reverse">
-          <img src="~/assets/images/lehdet.webp" class="img-text__img" />
+          <img
+            src="~/assets/images/lehdet.webp"
+            class="img-text__img"
+            width="500"
+            height="685"
+            alt="Lehdet"
+          />
           <div class="img-text__text">
             <h2 style="font-size: 2.5rem">Monipuolinen valikoima</h2>
             <p>

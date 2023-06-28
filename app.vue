@@ -19,7 +19,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Tule kirpputorille Jämsään – myymään ja tekemään loistavia löytöjä. Saatavilla myös prosenttimyynti 50/50 -palvelulla. Lämpimästi tervetuloa!',
+        'Lämminhenkinen Kirpputori Jämsässä. Tervetuloa myymään ja tekemään loistavia löytöjä. Saatavilla myös prosenttimyynti 50/50 -palvelulla.',
     },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://menneentuulahdus.fi' },
@@ -27,7 +27,7 @@ useHead({
     {
       property: 'og:description',
       content:
-        'Tule kirpputorille Jämsään – myymään ja tekemään loistavia löytöjä. Saatavilla myös prosenttimyynti 50/50 -palvelulla. Lämpimästi tervetuloa!',
+        'Lämminhenkinen Kirpputori Jämsässä. Tervetuloa myymään ja tekemään loistavia löytöjä. Saatavilla myös prosenttimyynti 50/50 -palvelulla.',
     },
     {
       property: 'og:image',
@@ -43,7 +43,7 @@ useHead({
     {
       property: 'twitter:description',
       content:
-        'Tule kirpputorille Jämsään – myymään ja tekemään loistavia löytöjä. Saatavilla myös prosenttimyynti 50/50 -palvelulla. Lämpimästi tervetuloa!',
+        'Lämminhenkinen Kirpputori Jämsässä. Tervetuloa myymään ja tekemään loistavia löytöjä. Saatavilla myös prosenttimyynti 50/50 -palvelulla.',
     },
     {
       property: 'twitter:image',

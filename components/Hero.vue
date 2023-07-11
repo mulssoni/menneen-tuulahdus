@@ -126,7 +126,7 @@
   &__text {
     font-size: 1.1rem;
     margin-bottom: 2rem;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.25;
 
     @include breakpoint-down(md) {

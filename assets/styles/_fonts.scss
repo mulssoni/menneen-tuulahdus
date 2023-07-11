@@ -1,16 +1,17 @@
-@font-face {
-  font-family: 'Roboto Slab';
-  src: local ('Roboto Slab'),
-    url('/assets/fonts/RobotoSlab-VariableFont_wght.ttf')
-      format('truetype-variations');
-  font-weight: 100 900;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Roboto Flex';
-  src: local('Roboto Flex'),
-    url('/assets/fonts/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf')
-      format('truetype-variations');
-  font-weight: 100 1000;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+// @font-face {
+//   font-family: 'Roboto Slab';
+//   src: local ('Roboto Slab'),
+//     url('/assets/fonts/RobotoSlab-VariableFont_wght.ttf')
+//       format('truetype-variations');
+//   font-weight: 100 900;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: 'Roboto Flex';
+//   src: local('Roboto Flex'),
+//     url('/assets/fonts/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf')
+//       format('truetype-variations');
+//   font-weight: 100 1000;
+//   font-display: swap;
+// }

@@ -102,7 +102,8 @@
     display: none;
     align-items: center;
     padding: 1.25rem 0.5rem;
-    font-weight: 400;
+    font-weight: 700;
+    text-transform: uppercase;
     font-size: 0.85rem;
     opacity: 0.85;
 

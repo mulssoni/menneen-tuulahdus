@@ -1,4 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/assets/fonts/Roboto-Light.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/Roboto-Regular.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/assets/fonts/Roboto-Italic.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/assets/fonts/Roboto-Bold.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/assets/fonts/Roboto-BoldItalic.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url(/assets/fonts/RobotoSlab-VariableFont_wght.woff2)
+    format('woff2-variations');
+}
+
 // @font-face {
 //   font-family: 'Roboto Slab';
 //   src: local ('Roboto Slab'),
